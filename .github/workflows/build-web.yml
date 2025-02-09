@@ -3,10 +3,7 @@ on:
   push:
     branches: [ "main", "cicd/*" ]
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+permissions: write-all
 
 jobs:
   build:
