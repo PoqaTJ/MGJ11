@@ -52,8 +52,11 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          name: Build
+          name: github-pages
           path: build
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v4
 
       - name: Discord notification
         if: failure()
