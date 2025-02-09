@@ -86,4 +86,4 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         uses: Ilshidur/action-discord@master
         with:
-          args: "✅ https://PoqaTJ.github.io/MGJ11 has been updated!\nWhat's new: \n${{ github.event.head_commit.message }}\n"
+          args: "✅ https://poqatj.github.io/MGGJ11/ has been updated!\nWhat's new: \n${{ github.event.head_commit.message }}\n"
