@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Core.Services
+namespace Game.Services
 {
-    public class ServiceLocator
+    public class ServiceLocator : MonoBehaviour
     {
 #region singleton
         private static readonly string _serviceLocatorName = "ServiceLocator";
@@ -32,5 +30,6 @@ namespace Core.Services
 #endregion
 
         // List services here
+        //public MenuManager MenuManager;
     }
 }
