@@ -53,7 +53,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           name: github-pages
-          path: build
+          path: build/WebGL
 
       - name: Configure Pages
         uses: actions/configure-pages@v4
@@ -64,7 +64,7 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         uses: Ilshidur/action-discord@master
         with:
-          args: "❌ Build failed. Please investigate: https://github.com/PoqaTJ/MGJ11/actions//runs/${{github.run_id}}\nLast commit:\n${{ github.event.head_commit.message }}\n"
+          args: "❌ Build failed. Please investigate: https://github.com/PoqaTJ/MGGJ11/actions//runs/${{github.run_id}}\nLast commit:\n${{ github.event.head_commit.message }}\n"
 
   deploy:
     needs: build
