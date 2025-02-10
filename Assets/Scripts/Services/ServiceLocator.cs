@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
+using Game;
 using UnityEngine;
 
-namespace Core.Services
+namespace Services
 {
-    public class ServiceLocator
+    public class ServiceLocator : MonoBehaviour
     {
 #region singleton
         private static readonly string _serviceLocatorName = "ServiceLocator";
@@ -31,6 +31,12 @@ namespace Core.Services
         private static ServiceLocator _instance;
 #endregion
 
-        // List services here
+        private void Awake()
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+
+// List services here
+        public GameManager GameManager;
     }
 }
