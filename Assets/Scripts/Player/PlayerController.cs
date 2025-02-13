@@ -10,6 +10,7 @@ namespace Player
         private InputAction _jumpAction;
         
         [SerializeField] private Rigidbody2D _rigidbody2D;
+        [SerializeField] private Animator _anim;
 
         // ground check
         [SerializeField] private BoxCollider2D _groundCollider;
@@ -19,6 +20,8 @@ namespace Player
         // stats - move to scriptableobject for fast swap between power ups?
         [SerializeField] private float acceleration = 3f;
         [SerializeField] private float deceleration = 5f;
+        [SerializeField] private float airAcceleration = 3f;
+        [SerializeField] private float airDeceleration = 5f;
         [SerializeField] private float maxSpeed = 10f;
 
         // jump
@@ -26,8 +29,12 @@ namespace Player
         [SerializeField] private float jumpShort = 5f;
         
         private Vector2 _moveVelocity;
-        private Vector2 _facingRight;
+        private bool _facingRight = true;
         private bool _grounded;
+        
+        private static readonly int _groundedParam = Animator.StringToHash("grounded");
+        private static readonly int _hMoveParam = Animator.StringToHash("hMove");
+        private static readonly int _yMoveParam = Animator.StringToHash("yMove");
 
         private void Start()
         {
@@ -65,11 +72,34 @@ namespace Player
 
         private void Move(float hMove)
         {
-            float change = hMove == 0 ? deceleration : acceleration;
+            
+            float change;
+            if (_grounded)
+            {
+                change = hMove == 0 ? deceleration : acceleration;
+
+            }
+            else
+            {
+                change = hMove == 0 ? airDeceleration : airAcceleration;
+            }
+
+            if (hMove < 0)
+            {
+                Face(false);
+            }
+            else if (hMove > 0)
+            {
+                Face(true);
+            }
 
             Vector2 targetVelocity = new Vector2(hMove * maxSpeed, 0);
             _moveVelocity = Vector2.Lerp(_moveVelocity, targetVelocity, change * Time.fixedDeltaTime);
             _rigidbody2D.velocity = new Vector2(_moveVelocity.x, _rigidbody2D.velocity.y);
+            
+            _anim.SetBool(_groundedParam, _grounded);
+            _anim.SetFloat(_hMoveParam, Mathf.Abs(hMove));
+            _anim.SetFloat(_yMoveParam, _rigidbody2D.velocity.y);
         }
 
         private void Jump()
@@ -85,6 +115,26 @@ namespace Player
             if (_rigidbody2D.velocity.y > jumpShort)
             {
                 _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpShort);
+            }
+        }
+
+        private void Face(bool right)
+        {
+            bool rotate = false;
+            if (right && !_facingRight)
+            {
+                _facingRight = true;
+                rotate = true;
+            }
+            else if (!right && _facingRight)
+            {
+                _facingRight = false;
+                rotate = true;
+            }
+
+            if (rotate)
+            {
+                transform.Rotate(0, 180f, 0);
             }
         }
     }
