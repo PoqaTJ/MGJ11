@@ -77,7 +77,7 @@ namespace Player
             if (_grounded)
             {
                 _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpVelocity);
-            }            
+            }
         }
 
         private void JumpCancel()

@@ -1,0 +1,436 @@
+fileFormatVersion: 2
+guid: b8962257d519e2343b548e1b7a5a3e3f
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: magical_girl_dev_thigh_right
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 1057
+        width: 70
+        height: 170
+      alignment: 9
+      pivot: {x: 0.54251796, y: 0.78887224}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b45934277e64711478baf6f051daa31a
+      internalID: -286098858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical_girl_dev_thigh_left
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 1056
+        width: 70
+        height: 170
+      alignment: 9
+      pivot: {x: 0.54251796, y: 0.78011835}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b1d4a0f940245e489c2cc7cc65d10d0
+      internalID: -1266334368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical_girl_dev_shoulder_right
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 1070
+        width: 122
+        height: 195
+      alignment: 9
+      pivot: {x: 0.52439505, y: 0.72131157}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa7c1866e8b1c2745abaeb37d81aefa3
+      internalID: -483973432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical_girl_dev_head
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 956
+        width: 656
+        height: 621
+      alignment: 9
+      pivot: {x: 0.4818519, y: 0.32267055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a2baba8b224d4448811f37f5b66af02
+      internalID: 1500072246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical_girl_dev_leg_right
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 756
+        width: 78
+        height: 251
+      alignment: 9
+      pivot: {x: 0.5763143, y: 0.89130104}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4659b13e74369c409ed3e23181a6fd5
+      internalID: -1266514552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical_girl_dev_leg_left
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 745
+        width: 78
+        height: 251
+      alignment: 9
+      pivot: {x: 0.5572345, y: 0.87944317}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb0317e9f86dfb64cb2c6aea51d13e2d
+      internalID: -432409499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical_girl_dev_shoulder_left
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 820
+        width: 132
+        height: 196
+      alignment: 9
+      pivot: {x: 0.49999908, y: 0.7353674}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b14cf5c167ef884ebdd825098d230d5
+      internalID: 79633737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical_girl_dev_torso
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 607
+        width: 152
+        height: 338
+      alignment: 9
+      pivot: {x: 0.5391605, y: 0.1565857}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89b18f1161b93c40964b128daec6847
+      internalID: 82326883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical_girl_dev_crown
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 306
+        width: 146
+        height: 164
+      alignment: 9
+      pivot: {x: 0.7140459, y: 0.21870738}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 063b81aa930b1704d93e8cdc32f83a28
+      internalID: -2142138853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical_girl_dev_arm_left
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 99
+        width: 105
+        height: 233
+      alignment: 9
+      pivot: {x: 0.3441005, y: 0.8257279}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb72a11c48feb1f49bb963944f33e8d8
+      internalID: -865095085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical_girl_dev_pigtail_right
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 10
+        width: 290
+        height: 691
+      alignment: 9
+      pivot: {x: 0.8207628, y: 0.9285641}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48025e71160a06f46a09aa27507f1cfc
+      internalID: 1660602894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical_girl_dev_pigtail_left
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 74
+        width: 283
+        height: 691
+      alignment: 9
+      pivot: {x: 0.18449526, y: 0.93502474}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0e1d100fd6ae0942802302fb257b275
+      internalID: 1944965053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical_girl_dev_skirt
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 323
+        width: 187
+        height: 184
+      alignment: 9
+      pivot: {x: 0.5159155, y: 0.8477697}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 990600386a980804e8608274a2795c3a
+      internalID: -1749489313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: magical_girl_dev_arm_right
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 113
+        width: 106
+        height: 208
+      alignment: 9
+      pivot: {x: 0.6263503, y: 0.82195103}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29fbe9a2d30301349b8f22de2048a053
+      internalID: 2108429864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      magical_girl_dev_0: -1916667334
+      magical_girl_dev_arm_left: -865095085
+      magical_girl_dev_arm_right: 2108429864
+      magical_girl_dev_crown: -2142138853
+      magical_girl_dev_head: 1500072246
+      magical_girl_dev_leg_left: -432409499
+      magical_girl_dev_leg_right: -1266514552
+      magical_girl_dev_pigtail_left: 1944965053
+      magical_girl_dev_pigtail_right: 1660602894
+      magical_girl_dev_shoulder_left: 79633737
+      magical_girl_dev_shoulder_right: -483973432
+      magical_girl_dev_skirt: -1749489313
+      magical_girl_dev_thigh_left: -1266334368
+      magical_girl_dev_thigh_right: -286098858
+      magical_girl_dev_torso: 82326883
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
