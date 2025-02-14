@@ -1,5 +1,6 @@
 ﻿using System;
 using Game;
+using Menus;
 using UnityEngine;
 
 namespace Services
@@ -38,5 +39,6 @@ namespace Services
 
 // List services here
         public GameManager GameManager;
+        public MenuManager MenuManager;
     }
 }
