@@ -23,6 +23,18 @@ MonoBehaviour:
     m_Key: game-title
     m_Metadata:
       m_Items: []
+  - m_Id: 1975690318381056
+    m_Key: dialog-powerup-double-jump-title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1975911186235392
+    m_Key: dialog-powerup-double-jump-body
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1975971449995264
+    m_Key: dialog-powerup-double-jump-button
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -16,13 +16,13 @@ namespace Services
                 if (_instance == null)
                 {
                     Debug.Log("Looking for ServiceLocator object in current scenes.");
-                    _instance = GameObject.Find(_serviceLocatorName).GetComponent<ServiceLocator>();
-
+                    var go = GameObject.Find(_serviceLocatorName);
+                    _instance = go?.GetComponent<ServiceLocator>();
                     if (_instance == null)
                     {
                         Debug.Log("Loading ServiceLocator from Resources.");
-                        var go = Resources.Load(_serviceLocatorName) as GameObject;
-                        _instance = go.GetComponent<ServiceLocator>();
+                        var gobj = Resources.Load(_serviceLocatorName) as GameObject;
+                        _instance = gobj.GetComponent<ServiceLocator>();
                     }
                 }
                 return _instance;
