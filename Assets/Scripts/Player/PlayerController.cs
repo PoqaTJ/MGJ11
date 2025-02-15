@@ -1,4 +1,5 @@
 ﻿using System;
+using Services;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -31,7 +32,12 @@ namespace Player
         private Vector2 _moveVelocity;
         private bool _facingRight = true;
         private bool _grounded;
-        
+
+        private bool _doubleJumpUnlocked;
+        private bool _hasDoubleJumped;
+
+        private bool _canDoubleJump => _doubleJumpUnlocked && !_hasDoubleJumped;
+
         private static readonly int _groundedParam = Animator.StringToHash("grounded");
         private static readonly int _hMoveParam = Animator.StringToHash("hMove");
         private static readonly int _yMoveParam = Animator.StringToHash("yMove");
@@ -40,6 +46,8 @@ namespace Player
         {
             _moveAction = InputSystem.actions.FindAction("Move");
             _jumpAction = InputSystem.actions.FindAction("Jump");
+
+            ServiceLocator.Instance.GameManager.OnDoublejumpUnlocked += () => _doubleJumpUnlocked = true;
         }
 
         private void FixedUpdate()
@@ -68,6 +76,10 @@ namespace Player
             Vector2 groundedSize = new Vector2(_groundCollider.bounds.size.x, _groundedCheckLength);
             var _groundHit = Physics2D.BoxCast(groundedOrigin, groundedSize, 0f, Vector2.down, _groundedCheckLength, _groundLayer);
             _grounded = _groundHit.collider != null;
+            if (_grounded)
+            {
+                _hasDoubleJumped = false;
+            }
         }
 
         private void Move(float hMove)
@@ -104,7 +116,18 @@ namespace Player
 
         private void Jump()
         {
+            bool jump = false;
             if (_grounded)
+            {
+                jump = true;
+            }
+            else if (_canDoubleJump)
+            {
+                _hasDoubleJumped = true;
+                jump = true;
+            }
+
+            if (jump)
             {
                 _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpVelocity);
             }

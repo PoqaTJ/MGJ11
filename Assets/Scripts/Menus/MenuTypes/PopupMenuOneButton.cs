@@ -30,7 +30,7 @@ namespace Menus.MenuTypes
 
         public void OnClick()
         {
-            ServiceLocator.Instance.MenuManager.HideTop();            
+            ServiceLocator.Instance.MenuManager.HideTop();
         }
         
         protected override void OnHide()
