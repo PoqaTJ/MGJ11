@@ -2,7 +2,7 @@
 using Services;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Localization.Settings;
 
 namespace Menus.MenuTypes
 {
@@ -17,9 +17,10 @@ namespace Menus.MenuTypes
         protected override void OnSetup(DialogContext context)
         {
             this.context = context as PopupMenuOneButtonContext;
-            titleString.text = this.context.titleLocString;
-            bodyString.text = this.context.bodyLocString;
-            buttonString.text = this.context.buttonLocString;
+            
+            titleString.text = LocalizationSettings.StringDatabase.GetLocalizedString("Launch", this.context.titleLocString);;
+            bodyString.text = LocalizationSettings.StringDatabase.GetLocalizedString("Launch", this.context.bodyLocString);;
+            buttonString.text = LocalizationSettings.StringDatabase.GetLocalizedString("Launch", this.context.buttonLocString);;
         }
 
         protected override void OnShow()
@@ -29,7 +30,7 @@ namespace Menus.MenuTypes
 
         public void OnClick()
         {
-            ServiceLocator.Instance.MenuManager.HideTop();            
+            ServiceLocator.Instance.MenuManager.HideTop();
         }
         
         protected override void OnHide()

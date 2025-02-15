@@ -26,6 +26,18 @@ MonoBehaviour:
     m_Localized: Gotta Go Up
     m_Metadata:
       m_Items: []
+  - m_Id: 1975690318381056
+    m_Localized: Double Jump
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1975911186235392
+    m_Localized: You can now jump again in mid-air!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1975971449995264
+    m_Localized: Yay!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

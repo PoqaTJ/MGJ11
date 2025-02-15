@@ -22,6 +22,13 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ja
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 30a9863356a168940a1df616430160a1
+    m_Address: Gameplay_ja
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ja
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: d42b6fee638e7ab46881e73cdc1428e3, type: 2}

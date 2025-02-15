@@ -1,10 +1,16 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Game
 {
     public class GameManager : MonoBehaviour
     {
+        #region events
+
+        public Action OnDoublejumpUnlocked;
+        #endregion
+        
         public State CurrentState { get; private set; }
         
         public void SetState(State state)
@@ -25,6 +31,11 @@ namespace Game
                     SceneManager.LoadSceneAsync("Gameplay");
                     break;
             }
+        }
+
+        public void UnlockDoubleJump()
+        {
+            OnDoublejumpUnlocked?.Invoke();
         }
     }
 
