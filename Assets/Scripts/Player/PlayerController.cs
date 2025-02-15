@@ -17,6 +17,10 @@ namespace Player
         [SerializeField] private BoxCollider2D _groundCollider;
         [SerializeField] private LayerMask _groundLayer;
         [SerializeField] private float _groundedCheckLength = 0.1f;
+        
+        // wall check
+        [SerializeField] private BoxCollider2D _wallCollider;
+        [SerializeField] private float _wallCheckLength = 0.05f;
 
         // stats - move to scriptableobject for fast swap between power ups?
         [SerializeField] private float acceleration = 3f;
@@ -36,6 +40,9 @@ namespace Player
         private bool _doubleJumpUnlocked;
         private bool _hasDoubleJumped;
 
+        private bool _wallJumpUnlocked;
+        private bool _walled;
+
         private bool _canDoubleJump => _doubleJumpUnlocked && !_hasDoubleJumped;
 
         private static readonly int _groundedParam = Animator.StringToHash("grounded");
@@ -44,6 +51,7 @@ namespace Player
 
         private void Start()
         {
+            
             _moveAction = InputSystem.actions.FindAction("Move");
             _jumpAction = InputSystem.actions.FindAction("Jump");
 
@@ -53,6 +61,7 @@ namespace Player
         private void FixedUpdate()
         {
             GroundCheck();
+            WallCheck();
 
             Move(_moveAction.ReadValue<Vector2>().x);
         }
@@ -79,6 +88,18 @@ namespace Player
             if (_grounded)
             {
                 _hasDoubleJumped = false;
+            }
+        }
+
+        private void WallCheck()
+        {
+            Vector2 walledOrigin = new Vector2(_wallCollider.bounds.center.x, _wallCollider.bounds.min.y);
+            Vector2 walledSize = new Vector2(_groundCollider.bounds.size.x, _groundedCheckLength);
+            var direction = _facingRight ? Vector2.right : Vector2.left;
+            var _wallHit = Physics2D.BoxCast(walledOrigin, walledSize, 0f, direction, _wallCheckLength, _groundLayer);
+            _walled = _wallHit.collider != null;
+            if (_walled)
+            {
             }
         }
 

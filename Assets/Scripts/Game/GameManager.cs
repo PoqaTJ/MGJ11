@@ -9,6 +9,8 @@ namespace Game
         #region events
 
         public Action OnDoublejumpUnlocked;
+        public Action OnWalljumpUnlocked;
+
         #endregion
         
         public State CurrentState { get; private set; }
@@ -30,6 +32,9 @@ namespace Game
                 case State.Gameplay:
                     SceneManager.LoadSceneAsync("Gameplay");
                     break;
+                case State.Debug:
+                    SceneManager.LoadSceneAsync("Debug");
+                    break;
             }
         }
 
@@ -37,11 +42,17 @@ namespace Game
         {
             OnDoublejumpUnlocked?.Invoke();
         }
+
+        public void UnlockWallJump()
+        {
+            OnWalljumpUnlocked?.Invoke();
+        }
     }
 
     public enum State
     {
         MainMenu,
-        Gameplay
+        Gameplay,
+        Debug
     }
 }

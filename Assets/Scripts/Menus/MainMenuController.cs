@@ -10,5 +10,10 @@ namespace Menus
         {
             ServiceLocator.Instance.GameManager.SetState(State.Gameplay);
         }
+
+        public void DebugPressed()
+        {
+            ServiceLocator.Instance.GameManager.SetState(State.Debug);
+        }
     }
 }
