@@ -49,7 +49,9 @@ namespace Player
 
             ServiceLocator.Instance.GameManager.OnDoublejumpUnlocked += () => _doubleJumpUnlocked = true;
 
-            _currentHealth = _maxHealth;
+            ServiceLocator.Instance.GameManager.RegisterPlayer(this);
+            
+            Reset();
         }
 
         private void FixedUpdate()
@@ -195,6 +197,12 @@ namespace Player
         {
             ServiceLocator.Instance.GameManager.OnPlayerDied?.Invoke();
             gameObject.SetActive(false);
+        }
+
+        public void Reset()
+        {
+            _currentHealth = _maxHealth;
+            _rigidbody2D.velocity = Vector2.zero;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using Player;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -21,6 +22,36 @@ namespace Game
 
         private PlayerController _player;
         private PlayerSpawner _spawner;
+
+        private void Start()
+        {
+            OnPlayerDied += OnPlayerDeath;
+        }
+
+        private void PlayerSpawned(PlayerController playerController)
+        {
+            _player = playerController;
+        }
+
+        private void OnPlayerDeath()
+        {
+            if (_spawner == null)
+            {
+                Debug.LogError("Player died but there is no active spawner so they will not respawn.");
+                return;
+            }
+
+            StartCoroutine(SpawnPlayer());
+        }
+
+        private IEnumerator SpawnPlayer()
+        {
+            yield return new WaitForSeconds(0.5f);
+            _player.transform.position = new Vector3(_spawner.transform.position.x, _spawner.transform.position.y,
+                _player.transform.position.z);
+            _player.Reset();
+            _player.gameObject.SetActive(true);
+        }
 
         public void SetState(State state)
         {
@@ -53,6 +84,16 @@ namespace Game
         public void UnlockWallJump()
         {
             OnWalljumpUnlocked?.Invoke();
+        }
+
+        public void ActivateSpawner(PlayerSpawner playerSpawner)
+        {
+            _spawner = playerSpawner;
+        }
+
+        public void RegisterPlayer(PlayerController playerController)
+        {
+            _player = playerController;
         }
     }
 
