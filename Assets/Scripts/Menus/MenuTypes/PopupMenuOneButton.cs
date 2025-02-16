@@ -12,6 +12,9 @@ namespace Menus.MenuTypes
         [SerializeField] private TMP_Text bodyString;
         [SerializeField] private TMP_Text buttonString;
 
+        
+        public override MenuType GetMenuType() => MenuType.PopupOneButton;
+        
         private PopupMenuOneButtonContext context;
 
         protected override void OnSetup(DialogContext context)

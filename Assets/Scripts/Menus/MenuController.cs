@@ -4,7 +4,10 @@ namespace Menus
 {
     public class MenuController : MonoBehaviour
     {
-        [SerializeField] public readonly MenuType MenuType;
+        public virtual MenuType GetMenuType()
+        {
+            return MenuType.PopupOneButton;
+        }
         
         public void Setup(DialogContext context)
         {

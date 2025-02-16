@@ -38,6 +38,18 @@ MonoBehaviour:
     m_Localized: Yay!
     m_Metadata:
       m_Items: []
+  - m_Id: 2564573921869824
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2565414514917376
+    m_Localized: Tomoya
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2565461180743680
+    m_Localized: Akari
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

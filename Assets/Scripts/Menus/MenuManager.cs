@@ -26,12 +26,12 @@ namespace Menus
                     Debug.LogError("No MenuController on prefab " + prefab.name);
                     continue;
                 }
-                if (_prefabDict.ContainsKey(controller.MenuType))
+                if (_prefabDict.ContainsKey(controller.GetMenuType()))
                 {
-                    Debug.LogError($"Duplicate menu prefabs of type {controller.MenuType}");
+                    Debug.LogError($"Duplicate menu prefabs of type {controller.GetMenuType()}");
                     continue;
                 }
-                _prefabDict[controller.MenuType] = controller.gameObject;
+                _prefabDict[controller.GetMenuType()] = controller.gameObject;
             }
         }
 
@@ -43,9 +43,9 @@ namespace Menus
             _clickBlocker.gameObject.SetActive(true);
             _clickBlocker.SetSiblingIndex(1);
             
-            menu.transform.parent = _menuRoot;
-            menu.transform.position =
-                new Vector3((_menuRoot.rect.width / 2) - menuRectTransform.rect.width / 4, (_menuRoot.rect.height / 2) - menuRectTransform.rect.height / 4, menu.transform.position.z);
+            menu.transform.SetParent(_menuRoot);
+            menuRectTransform.localPosition = new Vector3(0, 0, menuRectTransform.position.z);
+             //   new Vector3((_menuRoot.rect.width / 2) - menuRectTransform.rect.width / 4, (_menuRoot.rect.height / 2) - menuRectTransform.rect.height / 4, menu.transform.position.z);
             _menus.Push(menu);
             menu.Setup(context);
             menu.Show();

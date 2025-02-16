@@ -13,4 +13,22 @@ MonoBehaviour:
   m_Name: AkariAtPortal
   m_EditorClassIdentifier: 
   ID: akari-at-portal
-  Dialogs: []
+  Dialogs:
+  - Character: 0
+    Text: 
+    Side: 0
+  - Character: 0
+    Text: 
+    Side: 0
+  - Character: 0
+    Text: 
+    Side: 0
+  - Character: 0
+    Text: 
+    Side: 0
+  - Character: 0
+    Text: 
+    Side: 0
+  - Character: 0
+    Text: 
+    Side: 0
