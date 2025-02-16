@@ -9,6 +9,7 @@ namespace Player
     {
         private InputAction _moveAction;
         private InputAction _jumpAction;
+        [SerializeField] private PlayerStats _stats;
         
         [SerializeField] private Rigidbody2D _rigidbody2D;
         [SerializeField] private Animator _anim;
@@ -21,17 +22,6 @@ namespace Player
         // wall check
         [SerializeField] private BoxCollider2D _wallCollider;
         [SerializeField] private float _wallCheckLength = 0.05f;
-
-        // stats - move to scriptableobject for fast swap between power ups?
-        [SerializeField] private float acceleration = 3f;
-        [SerializeField] private float deceleration = 5f;
-        [SerializeField] private float airAcceleration = 3f;
-        [SerializeField] private float airDeceleration = 5f;
-        [SerializeField] private float maxSpeed = 10f;
-
-        // jump
-        [SerializeField] private float jumpVelocity = 10f;
-        [SerializeField] private float jumpShort = 5f;
         
         private Vector2 _moveVelocity;
         private bool _facingRight = true;
@@ -109,12 +99,12 @@ namespace Player
             float change;
             if (_grounded)
             {
-                change = hMove == 0 ? deceleration : acceleration;
+                change = hMove == 0 ? _stats.Deceleration : _stats.Acceleration;
 
             }
             else
             {
-                change = hMove == 0 ? airDeceleration : airAcceleration;
+                change = hMove == 0 ? _stats.AirDeceleration : _stats.AirAcceleration;
             }
 
             if (hMove < 0)
@@ -126,7 +116,7 @@ namespace Player
                 Face(true);
             }
 
-            Vector2 targetVelocity = new Vector2(hMove * maxSpeed, 0);
+            Vector2 targetVelocity = new Vector2(hMove * _stats.MaxSpeed, 0);
             _moveVelocity = Vector2.Lerp(_moveVelocity, targetVelocity, change * Time.fixedDeltaTime);
             _rigidbody2D.velocity = new Vector2(_moveVelocity.x, _rigidbody2D.velocity.y);
             
@@ -150,15 +140,15 @@ namespace Player
 
             if (jump)
             {
-                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpVelocity);
+                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _stats.JumpVelocity);
             }
         }
 
         private void JumpCancel()
         {
-            if (_rigidbody2D.velocity.y > jumpShort)
+            if (_rigidbody2D.velocity.y > _stats.JumpShort)
             {
-                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, jumpShort);
+                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _stats.JumpShort);
             }
         }
 

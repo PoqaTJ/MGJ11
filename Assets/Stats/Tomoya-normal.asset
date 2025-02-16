@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df34756b6e444e2b9989f116a0aca1f8, type: 3}
+  m_Name: Tomoya-normal
+  m_EditorClassIdentifier: 
+  Acceleration: 1.5
+  Deceleration: 2.5
+  AirAcceleration: 1.5
+  AirDeceleration: 2.5
+  MaxSpeed: 5
+  JumpVelocity: 5
+  JumpShort: 3
