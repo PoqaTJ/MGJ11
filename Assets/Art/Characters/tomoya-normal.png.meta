@@ -1,0 +1,611 @@
+fileFormatVersion: 2
+guid: 8cea9eda734149f41ab47596dcc0bcb8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tomoya-normal-torso
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 1272
+        width: 138
+        height: 300
+      alignment: 9
+      pivot: {x: 0.52, y: 0.009}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61887912857f83c49aa030da56cebb22
+      internalID: -320220386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-normal-thigh-right
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 1357
+        width: 70
+        height: 163
+      alignment: 9
+      pivot: {x: 0.59231657, y: 0.8369837}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc285f7bf37bfc42b7bacbd33656f04
+      internalID: -1634703039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-normal-forearm-righ
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1379
+        width: 67
+        height: 179
+      alignment: 9
+      pivot: {x: 0.5964492, y: 0.78881156}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a8cdd48b44be440acc191ee10fdfde
+      internalID: 1463322656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-normal-eye-righ
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 1462
+        width: 63
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f07c5de15d91304ab134939ad3853c1
+      internalID: 1246450516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-normal-eye-left
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1462
+        width: 67
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5908c18d5d0db704ab576925281d157c
+      internalID: -1722160524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-normal_5
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 1356
+        width: 70
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba1e04c1eef300c44aefce7b7a75d1ab
+      internalID: -1049249550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-normal_6
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 1360
+        width: 62
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b679742bdfb794da7d3c2309865d71
+      internalID: -264270017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-normal_7
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 1246
+        width: 78
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e28a11949600d8a4287759603e8ad19a
+      internalID: 918055454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-normal_8
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 1250
+        width: 82
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7825ad49f6d17b54ca3165d0249f25de
+      internalID: -1057919958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-normal-skirt
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1000
+        width: 183
+        height: 165
+      alignment: 9
+      pivot: {x: 0.50882816, y: 0.77415144}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e0c98629e077547b414954439ce283
+      internalID: 1781399303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-normal-thigh-left
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 998
+        width: 70
+        height: 163
+      alignment: 9
+      pivot: {x: 0.569237, y: 0.81716037}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0496604289438bc429b35993a20edb2b
+      internalID: 1346380104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-normal-forearm-left
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 967
+        width: 74
+        height: 170
+      alignment: 9
+      pivot: {x: 0.4781684, y: 0.7755917}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df4a39f2bcb881e459b06789354b5fc5
+      internalID: -1890177760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-normal_12
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 1124
+        width: 68
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e202d505cb989044c891c53dd4b81fcd
+      internalID: -641997605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-normal_13
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 1120
+        width: 57
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c7d576c49435d42acace50d8e5e0d9
+      internalID: -589670528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-normal-arm-right
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 695
+        width: 93
+        height: 218
+      alignment: 9
+      pivot: {x: 0.60422814, y: 0.9001787}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90504bb3e8597c44699259cc2b7ec9d4
+      internalID: -1116060633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-normal-arm-left
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 686
+        width: 105
+        height: 237
+      alignment: 9
+      pivot: {x: 0.2845953, y: 0.89536333}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7fcd6ebc3a54cb40ab31ad987a9fe8c
+      internalID: -922438670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-normal-ribbon-right
+      rect:
+        serializedVersion: 2
+        x: 946
+        y: 833
+        width: 137
+        height: 204
+      alignment: 9
+      pivot: {x: 0.6886762, y: 0.79301393}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 761562d8c54c84b4f91d4400e5beb2be
+      internalID: -309523958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-normal-ribbon-left
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 832
+        width: 117
+        height: 198
+      alignment: 9
+      pivot: {x: 0.43096036, y: 0.8018935}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b5451f67e0240143b6a702d3c4063ed
+      internalID: 2045860270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-normal-leg-right
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 581
+        width: 74
+        height: 238
+      alignment: 9
+      pivot: {x: 0.52183163, y: 0.9276423}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f17892a650ecf0419312a2ca4969441
+      internalID: -231630170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-normal-leg-left
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 570
+        width: 78
+        height: 231
+      alignment: 9
+      pivot: {x: 0.47928795, y: 0.89164543}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2a96d74e6b27f4482a75ffc6bc76fd
+      internalID: 858735522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-normal-hair-front
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 38
+        width: 415
+        height: 431
+      alignment: 9
+      pivot: {x: 0.5038929, y: 0.09143093}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38b2b9e33376b474f9115eb37ee8f989
+      internalID: -1604949064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-normal-hair-back
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 45
+        width: 431
+        height: 399
+      alignment: 9
+      pivot: {x: 0.50374836, y: 0.115348645}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be10c74a3243b23499ef8b7e9b367249
+      internalID: 1469376696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      tomoya-normal-arm-left: -922438670
+      tomoya-normal-arm-right: -1116060633
+      tomoya-normal-eye-left: -1722160524
+      tomoya-normal-eye-righ: 1246450516
+      tomoya-normal-forearm-left: -1890177760
+      tomoya-normal-forearm-righ: 1463322656
+      tomoya-normal-hair-back: 1469376696
+      tomoya-normal-hair-front: -1604949064
+      tomoya-normal-leg-left: 858735522
+      tomoya-normal-leg-right: -231630170
+      tomoya-normal-ribbon-left: 2045860270
+      tomoya-normal-ribbon-right: -309523958
+      tomoya-normal-skirt: 1781399303
+      tomoya-normal-thigh-left: 1346380104
+      tomoya-normal-thigh-right: -1634703039
+      tomoya-normal-torso: -320220386
+      tomoya-normal_12: -641997605
+      tomoya-normal_13: -589670528
+      tomoya-normal_5: -1049249550
+      tomoya-normal_6: -264270017
+      tomoya-normal_7: 918055454
+      tomoya-normal_8: -1057919958
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
