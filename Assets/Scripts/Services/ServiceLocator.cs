@@ -22,7 +22,7 @@ namespace Services
                     {
                         Debug.Log("Loading ServiceLocator from Resources.");
                         var gobj = Resources.Load(_serviceLocatorName) as GameObject;
-                        _instance = gobj.GetComponent<ServiceLocator>();
+                        _instance = Instantiate(gobj).GetComponent<ServiceLocator>();
                     }
                 }
                 return _instance;
