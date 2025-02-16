@@ -41,6 +41,8 @@ namespace Player
 
         private int _maxHealth = 3;
         private int _currentHealth;
+        private bool _blockMove = false;
+        private float _unblockMoveTime;
 
         private void Start()
         {
@@ -56,6 +58,11 @@ namespace Player
 
         private void FixedUpdate()
         {
+            if (_blockMove && Time.timeSinceLevelLoad > _unblockMoveTime)
+            {
+                _blockMove = false;
+                _rigidbody2D.velocity = Vector2.zero;
+            }
             GroundCheck();
             WallCheck();
 
@@ -64,6 +71,11 @@ namespace Player
 
         private void Update()
         {
+            if (_blockMove)
+            {
+                return;
+            }
+            
             if (_jumpAction.triggered)
             {
                 Jump();
@@ -101,7 +113,10 @@ namespace Player
 
         private void Move(float hMove)
         {
-            
+            if (_blockMove)
+            {
+                return;
+            }
             float change;
             if (_grounded)
             {
@@ -178,8 +193,13 @@ namespace Player
             }
         }
 
-        public void TakeDamage(int dmg)
+        public void TakeDamage(int dmg, Vector2 location)
         {
+            if (_blockMove)
+            {
+                return;
+            }
+            
             _currentHealth -= dmg;
             _currentHealth = Mathf.Max(0, _currentHealth);
 
@@ -189,6 +209,10 @@ namespace Player
             }
             else
             {
+                float xdir = location.x < transform.position.x ? 1 : -1;
+                _rigidbody2D.velocity = new Vector2(xdir, 1) * 5;
+                _blockMove = true;
+                _unblockMoveTime = Time.timeSinceLevelLoad + 0.2f;
                 ServiceLocator.Instance.GameManager.OnPlayerTakeDamage?.Invoke();
             }
         }
