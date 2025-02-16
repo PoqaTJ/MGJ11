@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,448 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: akari-normal-torso
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 1255
+        width: 128
+        height: 319
+      alignment: 9
+      pivot: {x: 0.5504855, y: 0.2518456}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef40beff753081f4e97a45af29537cbd
+      internalID: 759252629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-normal-leg-right
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 1391
+        width: 77
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58d950d71f8d96f4e87d49ba5d0d4502
+      internalID: 1462466483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-normal-leg-left
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 1388
+        width: 80
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af30757ad8748de4db5e57a63b205cb4
+      internalID: 1105844741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-normal-arm-right
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 1371
+        width: 96
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 187a77e2e82c54a40917aad0fc551720
+      internalID: 2123293956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-normal-arm-left
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 1362
+        width: 105
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44857348aad6654c9a1c343864fb771
+      internalID: -279348619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-normal-eye-right
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 1470
+        width: 64
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba81e7d121296fa49ada6d3fd5302b5f
+      internalID: -418897619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-normal-eye-left
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 1470
+        width: 66
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f99f406be95637443ae893d500d7b3f7
+      internalID: 1116358402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-normal_7
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 1364
+        width: 70
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b0562e2a19cb745a59126b821a1a05
+      internalID: -1042158109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-normal_8
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 1368
+        width: 62
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0635bf2cabcfff48891448d3700baf8
+      internalID: -1506133562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-normal_9
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 1254
+        width: 78
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 807e78c9b4f14b0409b3469614f18bdc
+      internalID: -203865814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-normal_10
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 1258
+        width: 82
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11fd3be41b4c2d438123ada5f67b47b
+      internalID: -1538472288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-normal-skirt
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 1000
+        width: 183
+        height: 165
+      alignment: 9
+      pivot: {x: 0.51765627, y: 0.78394294}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73eda4250ab8bf1438ddbfbb70ef0bc1
+      internalID: 194684155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-normal-forearm-right
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 1020
+        width: 67
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45f65127d4f6734da9c2fa05223a160
+      internalID: 1698277232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-normal_13
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 1132
+        width: 68
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 990ee73aa0c47ab4498bd081fd6c43b5
+      internalID: -641036172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-normal_14
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 1128
+        width: 57
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b752e7f6d12915b498530a760c6dab0c
+      internalID: -1895619497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-normal-forearm-left
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 700
+        width: 74
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7290fe5a56a9a3f40a6b8a00894149ee
+      internalID: 1363721590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-normal-hair
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 697
+        width: 579
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2948fd97dd886fd489e249f867852ea1
+      internalID: 1027677121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-normal-ribbon-right
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 389
+        width: 131
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11a9b9095551b4f47995b1c0c5935f64
+      internalID: -779818449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-normal-ribbon-left
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 389
+        width: 131
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 489668aaef42be14db7e0b9164dc3f62
+      internalID: 178308533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-normal-pigtail-right
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 31
+        width: 252
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ba7c36adef885344946b431f43a74a0
+      internalID: 1220789090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-normal-pigtail-left
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 31
+        width: 252
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce678da78129eaf428b1600e04ea47a8
+      internalID: 742536542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +560,28 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      akari-normal-arm-left: -279348619
+      akari-normal-arm-right: 2123293956
+      akari-normal-eye-left: 1116358402
+      akari-normal-eye-right: -418897619
+      akari-normal-forearm-left: 1363721590
+      akari-normal-forearm-right: 1698277232
+      akari-normal-hair: 1027677121
+      akari-normal-leg-left: 1105844741
+      akari-normal-leg-right: 1462466483
+      akari-normal-pigtail-left: 742536542
+      akari-normal-pigtail-right: 1220789090
+      akari-normal-ribbon-left: 178308533
+      akari-normal-ribbon-right: -779818449
+      akari-normal-skirt: 194684155
+      akari-normal-torso: 759252629
+      akari-normal_10: -1538472288
+      akari-normal_13: -641036172
+      akari-normal_14: -1895619497
+      akari-normal_7: -1042158109
+      akari-normal_8: -1506133562
+      akari-normal_9: -203865814
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
