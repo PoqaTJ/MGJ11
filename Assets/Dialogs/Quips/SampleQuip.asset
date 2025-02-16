@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a48453cb85647658ed9d092c933952a, type: 3}
   m_Name: SampleQuip
   m_EditorClassIdentifier: 
+  ID: 
   dialog:
     Character: 0
-    Text: 
+    Text: Oh no, not again!
     Side: 0

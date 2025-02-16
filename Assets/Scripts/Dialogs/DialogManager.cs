@@ -1,5 +1,6 @@
 ﻿using System;
 using Menus;
+using Menus.Quips;
 using Services;
 using UnityEngine;
 
@@ -7,6 +8,8 @@ namespace Dialogs
 {
     public class DialogManager: MonoBehaviour
     {
+        [SerializeField] private QuipController _quipController;
+        
         public void StartConversation(ConversationDefinition definition, Action onFinish)
         {
             var context = new Menus.MenuTypes.ConversationMenuContext();
@@ -15,9 +18,9 @@ namespace Dialogs
             ServiceLocator.Instance.MenuManager.Show(MenuType.ConversationMenu, context);
         }
 
-        public void ShowQuip(QuipDefinition definition, Action onFinish)
+        public void ShowQuip(QuipDefinition definition)
         {
-            
+            _quipController.Show(definition);
         }
     }
 }
