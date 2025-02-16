@@ -45,12 +45,16 @@ namespace Menus.MenuTypes
                 case DialogSide.Left:
                     _leftImage.enabled = true;
                     _leftName.enabled = true;
+                    _leftImage.color = new Color(1f, 1f, 1f, 1f);
+                    _rightImage.color = new Color(1f, 1f, 1f, 0.5f);
                     _leftImage.sprite = GetImage(character);
                     _leftName.text = GetName(character);
                     break;
                 case DialogSide.Right:
                     _rightImage.enabled = true;
                     _rightName.enabled = true;
+                    _rightImage.color = new Color(1f, 1f, 1f, 1f);
+                    _leftImage.color = new Color(1f, 1f, 1f, 0.5f);
                     _rightImage.sprite = GetImage(character);
                     _rightName.text = GetName(character);
                     break;
