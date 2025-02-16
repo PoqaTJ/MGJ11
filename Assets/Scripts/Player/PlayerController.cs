@@ -39,17 +39,30 @@ namespace Player
         private static readonly int _hMoveParam = Animator.StringToHash("hMove");
         private static readonly int _yMoveParam = Animator.StringToHash("yMove");
 
+        private int _maxHealth = 3;
+        private int _currentHealth;
+        private bool _blockMove = false;
+        private float _unblockMoveTime;
+
         private void Start()
         {
-            
             _moveAction = InputSystem.actions.FindAction("Move");
             _jumpAction = InputSystem.actions.FindAction("Jump");
 
             ServiceLocator.Instance.GameManager.OnDoublejumpUnlocked += () => _doubleJumpUnlocked = true;
+
+            ServiceLocator.Instance.GameManager.RegisterPlayer(this);
+            
+            Reset();
         }
 
         private void FixedUpdate()
         {
+            if (_blockMove && Time.timeSinceLevelLoad > _unblockMoveTime)
+            {
+                _blockMove = false;
+                _rigidbody2D.velocity = Vector2.zero;
+            }
             GroundCheck();
             WallCheck();
 
@@ -58,6 +71,11 @@ namespace Player
 
         private void Update()
         {
+            if (_blockMove)
+            {
+                return;
+            }
+            
             if (_jumpAction.triggered)
             {
                 Jump();
@@ -95,7 +113,10 @@ namespace Player
 
         private void Move(float hMove)
         {
-            
+            if (_blockMove)
+            {
+                return;
+            }
             float change;
             if (_grounded)
             {
@@ -170,6 +191,42 @@ namespace Player
             {
                 transform.Rotate(0, 180f, 0);
             }
+        }
+
+        public void TakeDamage(int dmg, Vector2 location)
+        {
+            if (_blockMove)
+            {
+                return;
+            }
+            
+            _currentHealth -= dmg;
+            _currentHealth = Mathf.Max(0, _currentHealth);
+
+            if (_currentHealth == 0)
+            {
+                Die();
+            }
+            else
+            {
+                float xdir = location.x < transform.position.x ? 1 : -1;
+                _rigidbody2D.velocity = new Vector2(xdir, 1) * 5;
+                _blockMove = true;
+                _unblockMoveTime = Time.timeSinceLevelLoad + 0.2f;
+                ServiceLocator.Instance.GameManager.OnPlayerTakeDamage?.Invoke();
+            }
+        }
+
+        public void Die()
+        {
+            ServiceLocator.Instance.GameManager.OnPlayerDied?.Invoke();
+            gameObject.SetActive(false);
+        }
+
+        public void Reset()
+        {
+            _currentHealth = _maxHealth;
+            _rigidbody2D.velocity = Vector2.zero;
         }
     }
 }
