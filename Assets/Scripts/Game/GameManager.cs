@@ -1,4 +1,5 @@
 ﻿using System;
+using Player;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,11 +11,17 @@ namespace Game
 
         public Action OnDoublejumpUnlocked;
         public Action OnWalljumpUnlocked;
+        public Action OnPlayerDied;
+        public Action OnPlayerTakeDamage;
+        public Action OnPlayerSpawn;
 
         #endregion
         
         public State CurrentState { get; private set; }
-        
+
+        private PlayerController _player;
+        private PlayerSpawner _spawner;
+
         public void SetState(State state)
         {
             if (CurrentState == state)

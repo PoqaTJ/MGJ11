@@ -39,13 +39,17 @@ namespace Player
         private static readonly int _hMoveParam = Animator.StringToHash("hMove");
         private static readonly int _yMoveParam = Animator.StringToHash("yMove");
 
+        private int _maxHealth = 3;
+        private int _currentHealth;
+
         private void Start()
         {
-            
             _moveAction = InputSystem.actions.FindAction("Move");
             _jumpAction = InputSystem.actions.FindAction("Jump");
 
             ServiceLocator.Instance.GameManager.OnDoublejumpUnlocked += () => _doubleJumpUnlocked = true;
+
+            _currentHealth = _maxHealth;
         }
 
         private void FixedUpdate()
@@ -170,6 +174,27 @@ namespace Player
             {
                 transform.Rotate(0, 180f, 0);
             }
+        }
+
+        public void TakeDamage(int dmg)
+        {
+            _currentHealth -= dmg;
+            _currentHealth = Mathf.Max(0, _currentHealth);
+
+            if (_currentHealth == 0)
+            {
+                Die();
+            }
+            else
+            {
+                ServiceLocator.Instance.GameManager.OnPlayerTakeDamage?.Invoke();
+            }
+        }
+
+        public void Die()
+        {
+            ServiceLocator.Instance.GameManager.OnPlayerDied?.Invoke();
+            gameObject.SetActive(false);
         }
     }
 }
