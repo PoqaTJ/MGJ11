@@ -76,3 +76,6 @@ crashlytics-build.properties
 
 # gameci
 /artifacts
+
+# vscode
+*.vscode

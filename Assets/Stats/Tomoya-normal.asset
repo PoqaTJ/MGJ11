@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Tomoya-normal
   m_EditorClassIdentifier: 
   Acceleration: 1.5
-  Deceleration: 2.5
+  Deceleration: 5
   AirAcceleration: 1.5
-  AirDeceleration: 2.5
+  AirDeceleration: 5
   MaxSpeed: 5
   JumpVelocity: 5
   JumpShort: 3
