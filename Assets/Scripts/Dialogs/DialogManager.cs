@@ -9,5 +9,10 @@ namespace Dialogs
         {
             
         }
+
+        public void ShowQuip(QuipDefinition definition, Action onFinish)
+        {
+            
+        }
     }
 }
