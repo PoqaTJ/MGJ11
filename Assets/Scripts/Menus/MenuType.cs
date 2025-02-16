@@ -3,6 +3,7 @@
     public enum MenuType
     {
         PopupOneButton,
-        PopupTwoButtons
+        PopupTwoButtons,
+        ConversationMenu
     }
 }

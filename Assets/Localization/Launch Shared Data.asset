@@ -35,6 +35,18 @@ MonoBehaviour:
     m_Key: dialog-powerup-double-jump-button
     m_Metadata:
       m_Items: []
+  - m_Id: 2564573921869824
+    m_Key: dialog-conversation-button-continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2565414514917376
+    m_Key: Tomoya
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2565461180743680
+    m_Key: Akari
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
