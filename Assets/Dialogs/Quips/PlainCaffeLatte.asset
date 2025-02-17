@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6d809b68116449fa87cc9d36d2b7f09, type: 3}
-  m_Name: AkariAtPortal
+  m_Script: {fileID: 11500000, guid: 2a48453cb85647658ed9d092c933952a, type: 3}
+  m_Name: PlainCaffeLatte
   m_EditorClassIdentifier: 
-  ID: akari-at-portal
-  Dialogs: []
+  ID: 
+  dialog:
+    Character: 0
+    Text: "Maybe I should try caff\xE8 latte plain first."
+    Side: 0

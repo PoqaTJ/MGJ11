@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d809b68116449fa87cc9d36d2b7f09, type: 3}
+  m_Name: TomoyaWaiting
+  m_EditorClassIdentifier: 
+  ID: TomoyaWaiting
+  Dialogs:
+  - Character: 0
+    Text: ...
+    Side: 0
+  - Character: 0
+    Text: (I wonder if I should try ordering a cafe latte?)
+    Side: 0
+  - Character: 0
+    Text: (As we get there by 2pm, the caffeine won't mess with my sleep.)
+    Side: 0
+  - Character: 0
+    Text: ...
+    Side: 0
+  - Character: 0
+    Text: ...
+    Side: 0
+  - Character: 0
+    Text: ...
+    Side: 0
+  - Character: 0
+    Text: (But we also usually get tea lattes...)
+    Side: 0
+  - Character: 0
+    Text: ...
+    Side: 0
+  - Character: 0
+    Text: ...
+    Side: 0
+  - Character: 0
+    Text: (What's taking them so long?)
+    Side: 0
+  - Character: 0
+    Text: (Usually they'd have been back by now.)
+    Side: 0
+  - Character: 0
+    Text: (Akari's portal! It's closing!)
+    Side: 0
+  - Character: 0
+    Text: (Something must have happened. I've got to go in!)
+    Side: 0
