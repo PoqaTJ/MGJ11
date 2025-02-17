@@ -1,0 +1,655 @@
+fileFormatVersion: 2
+guid: 3c6346ab5f3a3be42b2cdf1bf2c06883
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tomoya-magical-top
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 602
+        width: 122
+        height: 226
+      alignment: 9
+      pivot: {x: 0.531436, y: 0.17757125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd94d6f2e7d119f4bb8cfb4444b2ec71
+      internalID: 1170385124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-magical-leg-right
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 621
+        width: 81
+        height: 268
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d950ec0e527a4244a6a21c94bc405ee
+      internalID: -1636384396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-magical-leg-left
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 618
+        width: 79
+        height: 264
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d45dc5d5627820a45a69795adb02a946
+      internalID: -1975449261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-magical-socks-right
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 737
+        width: 69
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c79ad4abd96e934882c503ee216be8e
+      internalID: -2004097083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-magical-socks-left
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 735
+        width: 71
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38c34d7b001edd04f90e34c7fcd97c89
+      internalID: -1055773093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-magical-eye-right
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 723
+        width: 63
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba2d011b03c38e5408cedda7eea8b87a
+      internalID: -2093122535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-magical-eye-left
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 723
+        width: 67
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec88b87598cfa44c9a875f2b62c2304
+      internalID: -1070174828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-magical-hair-front
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 456
+        width: 415
+        height: 431
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33bc550bd55894b49840546744caca98
+      internalID: -624793333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-magical-hair-back
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 173
+        width: 458
+        height: 712
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dad39017a47bb7449c43d64dccff131
+      internalID: 86298085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-magical_9
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 617
+        width: 70
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92b335c574c253d41b0220866ffd7a66
+      internalID: 1714303785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-magical_10
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 621
+        width: 62
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 747b25c22966ca04b810da43d214466c
+      internalID: 1019164363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-magical-skirt
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 340
+        width: 206
+        height: 195
+      alignment: 9
+      pivot: {x: 0.5806758, y: 0.8146837}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dd5ed42ed9980f4b84a42c158559476
+      internalID: 1105399747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-magical-ribbon-right
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 360
+        width: 137
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db89b8a2c82df764c875b5b3ca1f2a44
+      internalID: 2110733781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-magical-ribbon-left
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 359
+        width: 117
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2eecae78165ea3408dca9175b4053d3
+      internalID: -720116486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-magical_14
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 507
+        width: 78
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13e818019d09ae2438c85ec92ae9c6ff
+      internalID: -963305399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-magical_15
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 511
+        width: 82
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b79cba683a860d49a71e667d667dd80
+      internalID: 1117931493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-magical_16
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 385
+        width: 68
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f18a3835cc4d98f44b77101f96ac3a27
+      internalID: -1113517102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-magical_17
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 381
+        width: 57
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6945a7b0a3c964ab1f4b0860802d70
+      internalID: -542152657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-magical-hand-right
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 63
+        width: 93
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d54a82883f39034496969229f482c21
+      internalID: 1876409749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-magical-hand-left
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 56
+        width: 103
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ed3dcb5265fed478bb787bf160f5a3
+      internalID: -1883038425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-magical-shoulder-righ
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 145
+        width: 95
+        height: 155
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc0d1f87b535c514fb39967544ddc6fe
+      internalID: 1285201211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-magical-shoulder-left
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 145
+        width: 106
+        height: 139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62eb5d089306d394599e19764042764e
+      internalID: 1662417378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-magical_22
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 40
+        width: 255
+        height: 267
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd44084a79610ba4cab0ea7d2d180f9b
+      internalID: 2030049888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tomoya-magical_23
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 38
+        width: 255
+        height: 267
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad01809c90b41f4b9b87f22bbcf0354
+      internalID: -981780331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      tomoya-magical-eye-left: -1070174828
+      tomoya-magical-eye-right: -2093122535
+      tomoya-magical-hair-back: 86298085
+      tomoya-magical-hair-front: -624793333
+      tomoya-magical-hand-left: -1883038425
+      tomoya-magical-hand-right: 1876409749
+      tomoya-magical-leg-left: -1975449261
+      tomoya-magical-leg-right: -1636384396
+      tomoya-magical-ribbon-left: -720116486
+      tomoya-magical-ribbon-right: 2110733781
+      tomoya-magical-shoulder-left: 1662417378
+      tomoya-magical-shoulder-righ: 1285201211
+      tomoya-magical-skirt: 1105399747
+      tomoya-magical-socks-left: -1055773093
+      tomoya-magical-socks-right: -2004097083
+      tomoya-magical-top: 1170385124
+      tomoya-magical_10: 1019164363
+      tomoya-magical_14: -963305399
+      tomoya-magical_15: 1117931493
+      tomoya-magical_16: -1113517102
+      tomoya-magical_17: -542152657
+      tomoya-magical_22: 2030049888
+      tomoya-magical_23: -981780331
+      tomoya-magical_9: 1714303785
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
