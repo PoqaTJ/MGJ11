@@ -6,12 +6,13 @@ namespace Baddy
 {
     public class DamageOnHit: MonoBehaviour
     {
+        [SerializeField] private int _damage = 1;
         private void OnTriggerEnter2D(Collider2D col)
         {
             if (col.CompareTag("Player"))
             {
                 PlayerController pc = col.GetComponent<PlayerController>();
-                pc.TakeDamage(1, transform.position);                
+                pc.TakeDamage(_damage, transform.position);                
             }
         }
     }
