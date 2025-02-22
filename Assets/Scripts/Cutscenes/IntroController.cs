@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using Dialogs;
+using Game;
 using Menus;
 using Menus.MenuTypes;
 using Player;
@@ -95,7 +96,7 @@ namespace Cutscenes
             ShowDebugDialog("The portal begins to close");
             yield return new WaitForSeconds(0.2f);
             ShowDebugDialog("Tomoya runs in");
-            SceneManager.LoadSceneAsync("Gameplay");
+            ServiceLocator.Instance.GameManager.SetState(State.Gameplay);
         }
 
         private IEnumerator MoveCharacterTo(PlayerMover mover, Transform loc)
@@ -129,7 +130,7 @@ namespace Cutscenes
                 Color color = _blackScreen.color;
                 color.a += .01f;
                 _blackScreen.color = color;
-                yield return null;
+                yield return new WaitForEndOfFrame();
             }
         }
 
@@ -140,7 +141,7 @@ namespace Cutscenes
                 Color color = _blackScreen.color;
                 color.a -= .01f;
                 _blackScreen.color = color;
-                yield return null;
+                yield return new WaitForEndOfFrame();
             }
         }
     }
