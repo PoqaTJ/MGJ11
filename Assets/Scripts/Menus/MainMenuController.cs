@@ -8,7 +8,7 @@ namespace Menus
     {
         public void StartPressed()
         {
-            ServiceLocator.Instance.GameManager.SetState(State.Gameplay);
+            ServiceLocator.Instance.GameManager.SetState(State.Intro);
         }
 
         public void DebugPressed()

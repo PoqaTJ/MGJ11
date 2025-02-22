@@ -67,6 +67,9 @@ namespace Game
                 case State.MainMenu:
                     SceneManager.LoadSceneAsync("Main");
                     break;
+                case State.Intro:
+                    SceneManager.LoadSceneAsync("Intro");
+                    break;
                 case State.Gameplay:
                     SceneManager.LoadSceneAsync("Gameplay");
                     break;
@@ -101,6 +104,7 @@ namespace Game
     {
         MainMenu,
         Gameplay,
-        Debug
+        Debug,
+        Intro
     }
 }
