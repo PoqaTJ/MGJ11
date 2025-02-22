@@ -166,7 +166,7 @@ namespace Player
             }
         }
 
-        private void Face(bool right)
+        public void Face(bool right)
         {
             bool rotate = false;
             if (right && !_facingRight)
