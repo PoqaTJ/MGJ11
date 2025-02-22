@@ -386,7 +386,7 @@ MonoBehaviour:
   dialogText: {fileID: 753936722084319112}
   _tomoyaSprite: {fileID: 21300000, guid: c00508f502da5864daf8b5769080ce3b, type: 3}
   _akariSprite: {fileID: 21300000, guid: ea2bae2e424593743976c2b31c47bbab, type: 3}
-  _butterflySprite: {fileID: 0}
+  _butterflySprite: {fileID: 21300000, guid: dcbd6a53069ef69429c447d84733c3f3, type: 3}
   _bigbadSprite: {fileID: 0}
 --- !u!1 &2398983084013091971
 GameObject:
