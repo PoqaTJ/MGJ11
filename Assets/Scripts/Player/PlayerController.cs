@@ -1,14 +1,10 @@
-﻿using System;
-using Services;
+﻿using Services;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Player
 {
     public class PlayerController : MonoBehaviour
     {
-        private InputAction _moveAction;
-        private InputAction _jumpAction;
         [SerializeField] private PlayerStats _stats;
         
         [SerializeField] private Rigidbody2D _rigidbody2D;
@@ -46,9 +42,6 @@ namespace Player
 
         private void Start()
         {
-            _moveAction = InputSystem.actions.FindAction("Move");
-            _jumpAction = InputSystem.actions.FindAction("Jump");
-
             ServiceLocator.Instance.GameManager.OnDoublejumpUnlocked += () => _doubleJumpUnlocked = true;
 
             ServiceLocator.Instance.GameManager.RegisterPlayer(this);
@@ -56,7 +49,7 @@ namespace Player
             Reset();
         }
 
-        private void FixedUpdate()
+        public void OnFixedUpdate(float xDir)
         {
             if (_blockMove && Time.timeSinceLevelLoad > _unblockMoveTime)
             {
@@ -66,22 +59,22 @@ namespace Player
             GroundCheck();
             WallCheck();
 
-            Move(_moveAction.ReadValue<Vector2>().x);
+            Move(xDir);
         }
 
-        private void Update()
+        public void OnUpdate(bool jumpTriggered, bool jumpReleased)
         {
             if (_blockMove)
             {
                 return;
             }
             
-            if (_jumpAction.triggered)
+            if (jumpTriggered)
             {
                 Jump();
             }
 
-            if (!_grounded && _jumpAction.WasReleasedThisFrame())
+            if (!_grounded && jumpReleased)
             {
                 JumpCancel();
             }
@@ -173,7 +166,7 @@ namespace Player
             }
         }
 
-        private void Face(bool right)
+        public void Face(bool right)
         {
             bool rotate = false;
             if (right && !_facingRight)
@@ -226,6 +219,11 @@ namespace Player
         public void Reset()
         {
             _currentHealth = _maxHealth;
+            _rigidbody2D.velocity = Vector2.zero;
+        }
+
+        public void StopHorizontalMovement()
+        {
             _rigidbody2D.velocity = Vector2.zero;
         }
     }
