@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Tomoya-magical
   m_EditorClassIdentifier: 
   Acceleration: 3
-  Deceleration: 5
+  Deceleration: 10
   AirAcceleration: 3
-  AirDeceleration: 5
+  AirDeceleration: 10
   MaxSpeed: 10
   JumpVelocity: 10
   JumpShort: 5
