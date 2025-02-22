@@ -34,7 +34,9 @@ namespace Player
         private static readonly int _groundedParam = Animator.StringToHash("grounded");
         private static readonly int _hMoveParam = Animator.StringToHash("hMove");
         private static readonly int _yMoveParam = Animator.StringToHash("yMove");
-
+        private static readonly int Spawn = Animator.StringToHash("Spawn");
+        private static readonly int Transform = Animator.StringToHash("Transform");
+        
         private int _maxHealth = 3;
         private int _currentHealth;
         private bool _blockMove = false;
@@ -220,6 +222,7 @@ namespace Player
         {
             _currentHealth = _maxHealth;
             _rigidbody2D.velocity = Vector2.zero;
+            _anim.SetTrigger(Spawn);
         }
 
         public void StopHorizontalMovement()

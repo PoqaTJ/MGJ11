@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df34756b6e444e2b9989f116a0aca1f8, type: 3}
   m_Name: Akari-intro
   m_EditorClassIdentifier: 
-  Acceleration: 0.6
+  Acceleration: 3
   Deceleration: 10
   AirAcceleration: 1.5
   AirDeceleration: 5
-  MaxSpeed: 5
+  MaxSpeed: 10
   JumpVelocity: 5
   JumpShort: 3
