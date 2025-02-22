@@ -14,6 +14,7 @@ namespace Dialogs
         {
             var context = new Menus.MenuTypes.ConversationMenuContext();
             context.Conversation = definition;
+            context.OnFinish = onFinish;
 
             ServiceLocator.Instance.MenuManager.Show(MenuType.ConversationMenu, context);
         }

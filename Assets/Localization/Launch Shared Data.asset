@@ -47,6 +47,34 @@ MonoBehaviour:
     m_Key: Akari
     m_Metadata:
       m_Items: []
+  - m_Id: 4760818463604736
+    m_Key: Akari transformation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4760867423715328
+    m_Key: Mascot opens portal
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4760893604560896
+    m_Key: Akari leaves
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4760931856613376
+    m_Key: The portal begins to close
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4761036013764608
+    m_Key: Tomoya runs in
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4761046864429056
+    m_Key: Placeholder
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4761083493285888
+    m_Key: Next
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

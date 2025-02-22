@@ -221,5 +221,10 @@ namespace Player
             _currentHealth = _maxHealth;
             _rigidbody2D.velocity = Vector2.zero;
         }
+
+        public void StopHorizontalMovement()
+        {
+            _rigidbody2D.velocity = Vector2.zero;
+        }
     }
 }

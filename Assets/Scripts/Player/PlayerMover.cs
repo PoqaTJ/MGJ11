@@ -5,23 +5,14 @@ namespace Player
 {
     public class PlayerMover: MonoBehaviour
     {
-        [SerializeField] private Transform _hTarget = null;
+        private Transform _hTarget = null;
         [SerializeField] private PlayerController _playerController;
 
         private Action _onArrive;
-        private float _lastFrameDiff;
-
-        private void Start()
-        {
-            if (_hTarget != null)
-            {
-                MoveTo(_hTarget, null);
-            }
-        }
+        private float _minDistance = 0.05f;
 
         public void MoveTo(Transform hLocation, Action onArrive)
         {
-            _lastFrameDiff = hLocation.position.x - transform.position.x;
             _hTarget = hLocation;
             _onArrive = onArrive;
         }
@@ -36,7 +27,7 @@ namespace Player
             if (_hTarget != null)
             {
                 float diff = _hTarget.position.x - transform.position.x;
-                if (diff == 0 || Mathf.Abs(diff) > Mathf.Abs(_lastFrameDiff))
+                if (diff == 0 || Mathf.Abs(diff) <= _minDistance)
                 {
                     OnReachTarget();
                     return;
@@ -53,7 +44,6 @@ namespace Player
                 }
 
                 _playerController.OnFixedUpdate(hMove);
-                _lastFrameDiff = diff;
             }
             else
             {
@@ -66,6 +56,7 @@ namespace Player
             transform.position = new Vector3(_hTarget.position.x, transform.position.y, transform.position.z);
             _onArrive?.Invoke();
             _hTarget = null;
+            _playerController.StopHorizontalMovement();
         }
 
         public enum Direction
