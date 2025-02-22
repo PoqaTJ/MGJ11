@@ -51,6 +51,7 @@ namespace Game
                 _player.transform.position.z);
             _player.Reset();
             _player.gameObject.SetActive(true);
+            OnPlayerSpawn?.Invoke();
         }
 
         public void SetState(State state)
