@@ -15,6 +15,5 @@ MonoBehaviour:
   ID: Cappuccino
   dialog:
     Character: 0
-    Text: "I wonder what the difference is between a caff\xE8 latte and a cappuccino.
-      A cappuccino somehow sounds fancier."
+    Text: (A cappucino sounds more fancy than a latte.0
     Side: 0

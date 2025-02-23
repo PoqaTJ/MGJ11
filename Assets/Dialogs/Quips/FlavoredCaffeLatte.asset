@@ -15,6 +15,6 @@ MonoBehaviour:
   ID: FlavoredCaffeLatte
   dialog:
     Character: 0
-    Text: "I wonder if I should try flavored caff\xE8 latte first... Maybe something
-      fruity, like cherry?"
+    Text: "(I wonder if I should try flavored caff\xE8 latte first... Maybe something
+      fruity, like cherry?)"
     Side: 0

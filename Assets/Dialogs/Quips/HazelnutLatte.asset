@@ -15,6 +15,5 @@ MonoBehaviour:
   ID: 
   dialog:
     Character: 0
-    Text: I've heard good things about hazelnut lattes... Wait, is Akari allergic
-      to nuts? I should ask.
+    Text: (I've heard good things about oatmilk in lattes.
     Side: 0

@@ -15,6 +15,5 @@ MonoBehaviour:
   ID: IrishCoffee
   dialog:
     Character: 0
-    Text: The Irish Coffee is also supposed to be popular at this cafe! I wonder
-      why it's called that... Maybe they have green whipped cream?
+    Text: I wonder what Irish Coffee is. Maybe it has green foam?
     Side: 0
