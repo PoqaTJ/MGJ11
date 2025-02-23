@@ -68,7 +68,7 @@ namespace Player
             Move(xDir);
         }
 
-        public void OnUpdate(bool jumpTriggered, bool jumpReleased)
+        public void OnUpdate(bool jumpTriggered, bool jumpReleased, float xDir)
         {
             if (_blockMove)
             {
@@ -77,10 +77,10 @@ namespace Player
             
             if (jumpTriggered)
             {
-                Jump();
+                Jump(xDir);
             }
 
-            if (!_grounded && jumpReleased)
+            if (!_grounded && jumpReleased && !_wallJumping)
             {
                 JumpCancel();
             }
@@ -159,10 +159,15 @@ namespace Player
             _anim.SetFloat(_yMoveParam, _rigidbody2D.velocity.y);
         }
 
-        private void Jump()
+        private void Jump(float xDir)
         {
+            if (xDir != 0)
+            {
+                Face(xDir > 0);                
+            }
+
             bool jump = false;
-             bool wallJump = false;
+            bool wallJump = false;
             if (_grounded)
             {
                 jump = true;
@@ -183,7 +188,7 @@ namespace Player
                 if (wallJump)
                 {
                     float xVelChange = _facingRight ? -_stats.WallJumpVelocityX : _stats.WallJumpVelocityX;
-                    _rigidbody2D.velocity = new Vector2(xVelChange, _stats.JumpVelocity);
+                    _rigidbody2D.velocity = new Vector2(xVelChange, _stats.WallJumpVelocityY);
                     _wallJumpEndTime = Time.timeSinceLevelLoad + _wallJumpDuration;
                     Face(!_facingRight);
                 }

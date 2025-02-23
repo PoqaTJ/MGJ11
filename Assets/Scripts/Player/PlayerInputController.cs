@@ -23,7 +23,7 @@ namespace Player
 
             bool jumpReleased = _jumpAction.WasReleasedThisFrame();
 
-            _playerController.OnUpdate(jumpTriggered, jumpReleased);
+            _playerController.OnUpdate(jumpTriggered, jumpReleased, _moveAction.ReadValue<Vector2>().x);
         }
 
         private void FixedUpdate()
