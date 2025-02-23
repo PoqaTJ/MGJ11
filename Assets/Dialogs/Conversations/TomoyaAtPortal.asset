@@ -18,8 +18,10 @@ MonoBehaviour:
     Text: Good luck!
     Side: 0
   - Character: 0
-    Text: When you're all done, let's go to this cute cafe I looked up! They have
-      lattes and donuts of all sorts.
+    Text: When you're all done, let's go to this cute cafe I found!
+    Side: 0
+  - Character: 0
+    Text: They have lattes and donuts of all sorts.
     Side: 0
   - Character: 1
     Text: That sounds great! I'd love some kind of tea latte.
