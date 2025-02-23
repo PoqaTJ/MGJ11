@@ -36,6 +36,7 @@ namespace Cutscenes
 
         [SerializeField] private Animator _akariAnimator;
         [SerializeField] private Animator _akariAnimator2;
+        [SerializeField] private ParticleSystem _akariParticleEmitter;
         
         [SerializeField] private Image _blackScreen;
         private static readonly int Close = Animator.StringToHash("Close");
@@ -84,15 +85,18 @@ namespace Cutscenes
 
             _butterflyController.Disappear();
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.2f);
             
             _akariAnimator.SetTrigger(StartTransform);
             _akariAnimator2.SetTrigger(StartTransform);
 
             yield return new WaitForSeconds(1.5f);
-            
+            _akariParticleEmitter.transform.SetParent(null);
+            _akariParticleEmitter.Play();
             _akariTransformed.transform.position = _akariNormal.transform.position;
             _akariNormal.gameObject.SetActive(false);
+
+            yield return FlashRed();
             yield return new WaitForSeconds(1.5f);
             
             _akariAnimator2.SetTrigger(StopTransform);
@@ -155,6 +159,28 @@ namespace Cutscenes
             yield return new WaitUntil(() => reached);
         }
 
+        private IEnumerator FlashRed()
+        {
+            Color originalColor = _blackScreen.color;
+            _blackScreen.color = new Color(1f, 0.2f, 0.04f, 0f);
+            while (_blackScreen.color.a < 1)
+            {
+                Color color = _blackScreen.color;
+                color.a +=.05f;
+                _blackScreen.color = color;
+                yield return new WaitForEndOfFrame();
+            }
+            while (_blackScreen.color.a > 0)
+            {
+                Color color = _blackScreen.color;
+                color.a -= .05f;
+                _blackScreen.color = color;
+                yield return new WaitForEndOfFrame();
+            }
+
+            _blackScreen.color = originalColor;
+        }
+        
         private IEnumerator FadeToBlack()
         {
             while (_blackScreen.color.a < 1)
