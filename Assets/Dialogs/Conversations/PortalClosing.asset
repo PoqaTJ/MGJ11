@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6d809b68116449fa87cc9d36d2b7f09, type: 3}
-  m_Name: TomoyaWaiting
+  m_Name: PortalClosing
   m_EditorClassIdentifier: 
-  ID: TomoyaWaiting
+  ID: PortalClosing
   Dialogs:
   - Character: 0
-    Text: (I wonder if I should try ordering a cafe latte?)
+    Text: (Akari's portal! It's closing!)
     Side: 0
   - Character: 0
-    Text: (As long as it's before 2pm, the caffeine won't mess with my sleep.)
+    Text: (Something must have happened.)
     Side: 0
   - Character: 0
-    Text: (Coffee would be a break from our usual tea lattes.)
+    Text: (I've got to go in!)
     Side: 0

@@ -15,6 +15,5 @@ MonoBehaviour:
   ID: LapsangSouchong
   dialog:
     Character: 0
-    Text: The Lapsang Souchong latte was delicious at that last cafe! Too bad Akari
-      said it tasted like a bacon latte.
+    Text: I liked the Lapsang Souchong latte, but Akari said it like bacon.
     Side: 0

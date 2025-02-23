@@ -10,16 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6d809b68116449fa87cc9d36d2b7f09, type: 3}
-  m_Name: TomoyaWaiting
+  m_Name: TomoyaPanics
   m_EditorClassIdentifier: 
-  ID: TomoyaWaiting
+  ID: TomoyaPanics
   Dialogs:
   - Character: 0
-    Text: (I wonder if I should try ordering a cafe latte?)
+    Text: (What's taking them so long?)
     Side: 0
   - Character: 0
-    Text: (As long as it's before 2pm, the caffeine won't mess with my sleep.)
+    Text: (Usually they'd have been back by now.)
     Side: 0
   - Character: 0
-    Text: (Coffee would be a break from our usual tea lattes.)
+    Text: (I can't keep pacing around in a circle like this.)
+    Side: 0
+  - Character: 0
+    Text: (If we take too long an adult would notice.)
     Side: 0
