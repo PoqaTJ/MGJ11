@@ -49,6 +49,16 @@ namespace Game
             }
         }
         
+        public int Level
+        {
+            get => _save.Level;
+            set
+            {
+                _save.Level = value;
+                Save();
+            }
+        }
+        
         public void Save()
         {
             PlayerPrefs.SetString(_playerPrefsKey, JsonUtility.ToJson(_save));

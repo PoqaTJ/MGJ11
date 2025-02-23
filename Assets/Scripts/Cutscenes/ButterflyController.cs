@@ -5,7 +5,7 @@ namespace Cutscenes
 {
     public class ButterflyController: MonoBehaviour
     {
-        private Transform _hTarget = null;
+        private Transform _target = null;
 
         private Action _onArrive;
         private float _minDistance = 0.05f;
@@ -16,7 +16,7 @@ namespace Cutscenes
 
         public void MoveTo(Transform hLocation, Action onArrive)
         {
-            _hTarget = hLocation;
+            _target = hLocation;
             _onArrive = onArrive;
         }
 
@@ -48,36 +48,23 @@ namespace Cutscenes
         
         private void FixedUpdate()
         {
-            if (_hTarget != null)
+            if (_target != null)
             {
-                float diff = _hTarget.position.x - transform.position.x;
-                if (diff == 0 || Mathf.Abs(diff) <= _minDistance)
+                float diff = Vector2.Distance(transform.position, _target.position);
+                if (diff == 0 || diff <= _minDistance)
                 {
                     OnReachTarget();
                     return;
                 }
-
-                float hMove;
-                if (diff < 0)
-                {
-                    hMove = -1;
-                }
-                else
-                {
-                    hMove = 1;
-                }
-
-                Vector3 currentLocalPos = transform.position;
-                currentLocalPos.x += _moveSpeed * Time.fixedDeltaTime * hMove;
-                transform.position = currentLocalPos;
+                transform.position = Vector3.MoveTowards(transform.position, _target.position, _moveSpeed * Time.fixedDeltaTime);
             }
         }
 
         private void OnReachTarget()
         {
-            transform.position = new Vector3(_hTarget.position.x, transform.position.y, transform.position.z);
+            transform.position = new Vector3(_target.position.x, _target.position.y, transform.position.z);
             _onArrive?.Invoke();
-            _hTarget = null;
+            _target = null;
         }
 
         public enum Direction

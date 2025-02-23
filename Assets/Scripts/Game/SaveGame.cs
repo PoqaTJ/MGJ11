@@ -7,5 +7,6 @@ namespace Game
     {
         public bool SeenIntro;
         public int Spawner;
+        public int Level;
     }
 }
