@@ -119,7 +119,8 @@ namespace Cutscenes
 
             yield return new WaitForSeconds(1f);
             yield return FadeToBlack();
-            
+
+            ServiceLocator.Instance.SaveManager.WatchedIntro = true;
             ServiceLocator.Instance.GameManager.SetState(State.Gameplay);
         }
 

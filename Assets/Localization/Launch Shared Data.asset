@@ -79,6 +79,42 @@ MonoBehaviour:
     m_Key: Butterfly
     m_Metadata:
       m_Items: []
+  - m_Id: 5113885470031872
+    m_Key: delete-save-button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5114068673036288
+    m_Key: delete-save-title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5114104421089280
+    m_Key: delete-save-body
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5114166408708096
+    m_Key: delete-save-cancel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5114214836142080
+    m_Key: delete-save-confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5117217232191488
+    m_Key: mm-button-start2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5117290204692480
+    m_Key: mm-button-continue2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5119548841590784
+    m_Key: mm-button-start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5119589891244032
+    m_Key: mm-button-continue
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
