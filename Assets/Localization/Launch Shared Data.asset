@@ -99,14 +99,6 @@ MonoBehaviour:
     m_Key: delete-save-confirm
     m_Metadata:
       m_Items: []
-  - m_Id: 5117217232191488
-    m_Key: mm-button-start2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 5117290204692480
-    m_Key: mm-button-continue2
-    m_Metadata:
-      m_Items: []
   - m_Id: 5119548841590784
     m_Key: mm-button-start
     m_Metadata:

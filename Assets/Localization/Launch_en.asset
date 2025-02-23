@@ -102,14 +102,6 @@ MonoBehaviour:
     m_Localized: Confirm
     m_Metadata:
       m_Items: []
-  - m_Id: 5117290204692480
-    m_Localized: Continue
-    m_Metadata:
-      m_Items: []
-  - m_Id: 5117217232191488
-    m_Localized: Start
-    m_Metadata:
-      m_Items: []
   - m_Id: 5119548841590784
     m_Localized: Start
     m_Metadata:

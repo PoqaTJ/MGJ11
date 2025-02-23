@@ -3,25 +3,38 @@ using Game;
 using Menus.MenuTypes;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization.Components;
 using UnityEngine.Localization.Settings;
+using UnityEngine.UI;
 
 namespace Menus
 {
     public class MainMenuController: MonoBehaviour
     {
-        [SerializeField] private TMP_Text _startButtonText;
-        private string _startLocTag = "mm-button-start2";
-        private string _continueLocTag = "mm-button-continue2";
-
+        [SerializeField] private GameObject _startButton;
+        [SerializeField] private GameObject _continueButton;
+        [SerializeField] private Button _deleteSaveButton;
+        
         private void Awake()
         {
-            UpdateLoc();
+            UpdateButtons();
         }
 
-        private void UpdateLoc()
+        private void UpdateButtons()
         {
-            string tag = ServiceLocator.Instance.SaveManager.WatchedIntro ? _continueLocTag : _startLocTag;
-            _startButtonText.text = LocalizationSettings.StringDatabase.GetLocalizedString("launch", tag);
+            bool saveExists = ServiceLocator.Instance.SaveManager.WatchedIntro;
+            if (saveExists)
+            {
+                _startButton.SetActive(false);                
+                _continueButton.SetActive(true);
+                _deleteSaveButton.interactable = true;
+            }
+            else
+            {                
+                _startButton.SetActive(true);                
+                _continueButton.SetActive(false); 
+                _deleteSaveButton.interactable = false;
+            }
         }
 
         public void StartPressed()
@@ -45,7 +58,7 @@ namespace Menus
             context.OnButtonRightAction = () =>
             {
                 ServiceLocator.Instance.SaveManager.Destroy();
-                UpdateLoc();
+                UpdateButtons();
             };
             ServiceLocator.Instance.MenuManager.Show(MenuType.PopupTwoButtons, context);
         }
