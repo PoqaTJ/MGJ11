@@ -397,7 +397,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2548858155897967989, guid: 6109d9efcd65961478a937e44a251ae6, type: 3}
       propertyPath: m_Name
-      value: StartConversation
+      value: PrismEncounter
       objectReference: {fileID: 0}
     - target: {fileID: 2890616482827820403, guid: 6109d9efcd65961478a937e44a251ae6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -439,6 +439,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3965763761192516885, guid: 6109d9efcd65961478a937e44a251ae6, type: 3}
+      propertyPath: _conversation
+      value: 
+      objectReference: {fileID: 11400000, guid: ff931806bcd1ba84e85169d907bb8bb1, type: 2}
     - target: {fileID: 7393637038473186515, guid: 6109d9efcd65961478a937e44a251ae6, type: 3}
       propertyPath: m_Radius
       value: 1

@@ -9,15 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df34756b6e444e2b9989f116a0aca1f8, type: 3}
-  m_Name: Tomoya-intro
+  m_Script: {fileID: 11500000, guid: f6d809b68116449fa87cc9d36d2b7f09, type: 3}
+  m_Name: TomoyaMeetsButterlfy
   m_EditorClassIdentifier: 
-  Acceleration: 1
-  Deceleration: 10
-  AirAcceleration: 1.5
-  AirDeceleration: 5
-  MaxSpeed: 3
-  JumpVelocity: 5
-  JumpShort: 3
-  WallJumpVelocityX: 2.5
-  WallJumpVelocityY: 8
+  ID: 
+  Dialogs:
+  - Character: 2
+    Text: Is that you, Tomoya?
+    Side: 1
+  - Character: 0
+    Text: Prism! I'm down here!
+    Side: 0
