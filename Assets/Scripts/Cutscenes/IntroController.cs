@@ -27,7 +27,12 @@ namespace Cutscenes
         [SerializeField] private ConversationDefinition _boredConversation;
         [SerializeField] private ConversationDefinition _portalClosingConversation;
 
+        [SerializeField] private Animator _portalController;
+        [SerializeField] private Transform _portalLocation;
+
         [SerializeField] private Image _blackScreen;
+        private static readonly int Close = Animator.StringToHash("Close");
+
         private void Start()
         {
             StartCoroutine(PlayIntro());
@@ -67,10 +72,10 @@ namespace Cutscenes
             yield return ShowDebugDialog("Akari transformation");
             yield return new WaitForSeconds(0.2f);
 
-            yield return ShowDebugDialog("Mascot opens portal");
-            yield return new WaitForSeconds(0.2f);
-
-            yield return ShowDebugDialog("Akari leaves");
+            _portalController.gameObject.SetActive(true);
+            yield return new WaitForSeconds(1.5f);
+            
+            yield return MoveCharacterTo(_akariNormal, _portalLocation);
             _akariNormal.gameObject.SetActive(false);
             yield return new WaitForSeconds(0.2f);
 
@@ -93,11 +98,22 @@ namespace Cutscenes
             ServiceLocator.Instance.DialogManager.StartConversation(_boredConversation, () => convOver = true);
             
             yield return new WaitForSeconds(0.2f);
-            ShowDebugDialog("The portal begins to close");
+            _portalController.SetTrigger(StartClosing);
             yield return new WaitForSeconds(0.2f);
-            ShowDebugDialog("Tomoya runs in");
+
+            ServiceLocator.Instance.DialogManager.StartConversation(_boredConversation, () => convOver = true);
+
+            yield return MoveCharacterTo(_tomoyaNormal, _portalLocation);
+            _tomoyaNormal.gameObject.SetActive(false);
+            _portalController.SetTrigger(Close);
+
+            yield return new WaitForSeconds(1f);
+            yield return FadeToBlack();
+            
             ServiceLocator.Instance.GameManager.SetState(State.Gameplay);
         }
+
+        public string StartClosing { get; set; }
 
         private IEnumerator MoveCharacterTo(PlayerMover mover, Transform loc)
         {
