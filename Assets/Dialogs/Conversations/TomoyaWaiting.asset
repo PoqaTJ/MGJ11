@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: TomoyaWaiting
   Dialogs:
   - Character: 0
-    Text: (I wonder if I should try ordering a cafe latte?)
+    Text: (I wonder if I should try ordering a latte?)
     Side: 0
   - Character: 0
     Text: (As long as it's before 2pm, the caffeine won't mess with my sleep.)
