@@ -14119,9 +14119,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1351327062}
-  - component: {fileID: 1351327065}
   - component: {fileID: 1351327064}
   - component: {fileID: 1351327063}
+  - component: {fileID: 1351327065}
   m_Layer: 0
   m_Name: WallJumpCollectable
   m_TagString: Untagged
@@ -14240,7 +14240,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1351327061}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d40097b0625418c99f5a072d09a6d30, type: 3}
+  m_Script: {fileID: 11500000, guid: 65dc44d03436461399c7ad70dd884ccb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1360731363

@@ -20,3 +20,4 @@ MonoBehaviour:
   JumpVelocity: 10
   JumpShort: 5
   WallJumpVelocityX: 5
+  WallJumpVelocityY: 10
