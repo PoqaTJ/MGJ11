@@ -12,7 +12,7 @@ using UnityEngine.UI;
 
 namespace Cutscenes
 {
-    public class IntroController: MonoBehaviour
+    public class IntroController: Director
     {
         [SerializeField] private PlayerMover _akariNormal;
         [SerializeField] private PlayerMover _akariTransformed;
@@ -21,7 +21,7 @@ namespace Cutscenes
         [SerializeField] private Transform _akariPosition1;
         [SerializeField] private Transform _tomoyaPosition1;
         [SerializeField] private Transform _tomoyaPosition2;
-
+        [SerializeField] private Transform _butterflyPosition;
 
         [SerializeField] private ConversationDefinition _convoAarriveAtPortal;
         [SerializeField] private ConversationDefinition _tomoyaArriveAtPortal;
@@ -62,7 +62,7 @@ namespace Cutscenes
                 _akariNormal.Face(PlayerMover.Direction.LEFT);
                 akariReached1 = true;
             });
-            _butterflyController.MoveTo(_akariPosition1, () =>
+            _butterflyController.MoveTo(_butterflyPosition, () =>
             {
                 _butterflyController.Face(ButterflyController.Direction.LEFT);
                 butterflyReached1 = true;
@@ -148,16 +148,7 @@ namespace Cutscenes
             ServiceLocator.Instance.GameManager.SetState(State.Gameplay);
         }
         
-        private IEnumerator MoveCharacterTo(PlayerMover mover, Transform loc)
-        {
-            bool reached = false;
-            mover.MoveTo(loc, () =>
-            {
-                reached = true;
-            });
 
-            yield return new WaitUntil(() => reached);
-        }
 
         private IEnumerator FlashRed()
         {

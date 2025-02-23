@@ -5089,6 +5089,7 @@ Transform:
   - {fileID: 551686825}
   - {fileID: 1803559419}
   - {fileID: 390977396}
+  - {fileID: 619004290}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &486132955 stripped
@@ -5146,6 +5147,37 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.25, y: 1.77, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 458712167}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &619004289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 619004290}
+  m_Layer: 0
+  m_Name: ButterflyTarget1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &619004290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619004289}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.62, y: 3.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10651,6 +10683,7 @@ MonoBehaviour:
   _akariPosition1: {fileID: 551686825}
   _tomoyaPosition1: {fileID: 1803559419}
   _tomoyaPosition2: {fileID: 551686825}
+  _butterflyPosition: {fileID: 619004290}
   _convoAarriveAtPortal: {fileID: 11400000, guid: ee4d3a964a33ba94da52d92c292841ac, type: 2}
   _tomoyaArriveAtPortal: {fileID: 11400000, guid: ee221a576f31c934dbd04a712a663540, type: 2}
   _boredConversation1: {fileID: 11400000, guid: 40abd85f84917489d87b5f3dc261f4b6, type: 2}
