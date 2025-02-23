@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,532 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: akari-magical_torso
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1311
+        width: 188
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16ab4d148374ff5458fe45ac0ff2fc7f
+      internalID: -2006845260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-magical_leg_right
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 1335
+        width: 81
+        height: 268
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49c2065548ee98e4faee179b1f4e5ac7
+      internalID: 2718866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-magical_leg_left
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 1332
+        width: 79
+        height: 264
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6e035f9cc81c1647944f99636cde6df
+      internalID: -1984717837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-magical_sock_right
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 1451
+        width: 69
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 894396d6d298bd14abaff1c38ca73063
+      internalID: -1131579673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-magical_sock_left
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 1449
+        width: 71
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd3adb7800130a4189a84027a30e240
+      internalID: 1236596232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-magical_eye_right
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 1430
+        width: 64
+        height: 115
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19a5666c29ed876428eb2ec43bc70c95
+      internalID: -1418881730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-magical_eye_left
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 1430
+        width: 66
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d5f1ed81792c6741945da5e62c2d163
+      internalID: -599197844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-magical_hair
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 1205
+        width: 579
+        height: 393
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1626c53d314a3e4abd175e379588405
+      internalID: -434601492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-magical_twintail_right
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 16
+        width: 382
+        height: 734
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 586ba703db74028488be9510acb0a318
+      internalID: -1679719234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-magical_9
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 1324
+        width: 70
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 236c38288c234ec4abfbf5222b478c0d
+      internalID: -1054573614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-magical_10
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 1328
+        width: 62
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35fc687043532884e942c3ef98b84c5d
+      internalID: -2011534228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-magical_skirt
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1044
+        width: 289
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf07663121c538545b064e6080cded6b
+      internalID: -2050468129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-magical_ribbon_right
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 1088
+        width: 131
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5245a893dd94c242b757926ae7b1828
+      internalID: 1309082106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-magical_ribbon_left
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 1089
+        width: 131
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1d32673e555e1843aa79cd0c8e8c1a7
+      internalID: -2063805633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-magical_14
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 1214
+        width: 78
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9cd0ee16f93bc54eae05dc8bbdb999d
+      internalID: -161452681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-magical_15
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 1218
+        width: 82
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e70f60344a26b4e8c4875469672ff8
+      internalID: 1816474608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-magical_16
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 1092
+        width: 68
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f23fe541ce17e7e4e8c41dcd3ed78e02
+      internalID: -534489334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-magical_17
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 1088
+        width: 57
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca5a68177db76444f963d967027a8d18
+      internalID: 1931064208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-magical_arm_right
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 776
+        width: 97
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1770aa1f11c10fd4b953dab666bd2766
+      internalID: -2061977955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-magical_arm_left
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 767
+        width: 107
+        height: 237
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 359c0400d0cb8724b9679180379d2253
+      internalID: -559961818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-magical_upperarm_right
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 912
+        width: 68
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84108d5c0fa65f849b2e6c4b51ca7437
+      internalID: 140489560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-magical_upperarm_left
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 915
+        width: 74
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80e2ccf27d558443872b4eee68cfea4
+      internalID: -1770452990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-magical_wing_right
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 754
+        width: 252
+        height: 268
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da5a1317f378d264199a19d6448dc671
+      internalID: -1190399641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-magical_wing_left
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 754
+        width: 252
+        height: 268
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeb3075d9bdc7d943a169808cc621c2d
+      internalID: -1006438388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: akari-magical_twintail_left
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 2
+        width: 382
+        height: 734
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7a82c464a1d947448ec54c512846608
+      internalID: -1565034216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +644,32 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      akari-magical_10: -2011534228
+      akari-magical_14: -161452681
+      akari-magical_15: 1816474608
+      akari-magical_16: -534489334
+      akari-magical_17: 1931064208
+      akari-magical_9: -1054573614
+      akari-magical_arm_left: -559961818
+      akari-magical_arm_right: -2061977955
+      akari-magical_eye_left: -599197844
+      akari-magical_eye_right: -1418881730
+      akari-magical_hair: -434601492
+      akari-magical_leg_left: -1984717837
+      akari-magical_leg_right: 2718866
+      akari-magical_ribbon_left: -2063805633
+      akari-magical_ribbon_right: 1309082106
+      akari-magical_skirt: -2050468129
+      akari-magical_sock_left: 1236596232
+      akari-magical_sock_right: -1131579673
+      akari-magical_torso: -2006845260
+      akari-magical_twintail_left: -1565034216
+      akari-magical_twintail_right: -1679719234
+      akari-magical_upperarm_left: -1770452990
+      akari-magical_upperarm_right: 140489560
+      akari-magical_wing_left: -1006438388
+      akari-magical_wing_right: -1190399641
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

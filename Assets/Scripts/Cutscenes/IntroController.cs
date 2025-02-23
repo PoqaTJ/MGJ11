@@ -33,10 +33,16 @@ namespace Cutscenes
         [SerializeField] private Transform _portalLocation;
 
         [SerializeField] private ButterflyController _butterflyController;
+
+        [SerializeField] private Animator _akariAnimator;
+        [SerializeField] private Animator _akariAnimator2;
         
         [SerializeField] private Image _blackScreen;
         private static readonly int Close = Animator.StringToHash("Close");
         private static readonly int StartClosing = Animator.StringToHash("StartClosing");
+        
+        private static readonly int StartTransform = Animator.StringToHash("TransformStart");
+        private static readonly int StopTransform = Animator.StringToHash("TransformEnd");
         
         private void Start()
         {
@@ -77,14 +83,27 @@ namespace Cutscenes
             yield return new WaitForSeconds(0.2f);
 
             _butterflyController.Disappear();
-            yield return ShowDebugDialog("Akari transformation");
-            yield return new WaitForSeconds(1f);
 
+            yield return new WaitForSeconds(1f);
+            
+            _akariAnimator.SetTrigger(StartTransform);
+            _akariAnimator2.SetTrigger(StartTransform);
+
+            yield return new WaitForSeconds(1.5f);
+            
+            _akariTransformed.transform.position = _akariNormal.transform.position;
+            _akariNormal.gameObject.SetActive(false);
+            yield return new WaitForSeconds(1.5f);
+            
+            _akariAnimator2.SetTrigger(StopTransform);
+            
+            yield return new WaitForSeconds(1.5f);
+            
             _portalController.gameObject.SetActive(true);
             yield return new WaitForSeconds(1.5f);
            
-            yield return MoveCharacterTo(_akariNormal, _portalLocation);
-            _akariNormal.gameObject.SetActive(false);
+            yield return MoveCharacterTo(_akariTransformed, _portalLocation);
+            _akariTransformed.gameObject.SetActive(false);
             yield return new WaitForSeconds(1f);
 
             yield return FadeToBlack();
@@ -134,19 +153,6 @@ namespace Cutscenes
             });
 
             yield return new WaitUntil(() => reached);
-        }
-        
-        private IEnumerator ShowDebugDialog(string description)
-        {
-            bool dismissed = false;
-            PopupMenuOneButton.PopupMenuOneButtonContext context = new PopupMenuOneButton.PopupMenuOneButtonContext();
-            context.titleLocString = "Placeholder";
-            context.bodyLocString = description;
-            context.buttonLocString = "Next";
-            context.OnCloseAction = () => dismissed = true;
-            ServiceLocator.Instance.MenuManager.Show(MenuType.PopupOneButton, context);
-            
-            yield return new WaitUntil(()=>dismissed);
         }
 
         private IEnumerator FadeToBlack()
