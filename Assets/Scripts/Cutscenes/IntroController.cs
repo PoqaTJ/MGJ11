@@ -36,6 +36,8 @@ namespace Cutscenes
         
         [SerializeField] private Image _blackScreen;
         private static readonly int Close = Animator.StringToHash("Close");
+        private static readonly int StartClosing = Animator.StringToHash("StartClosing");
+
 
         private void Start()
         {
@@ -123,9 +125,7 @@ namespace Cutscenes
             ServiceLocator.Instance.SaveManager.WatchedIntro = true;
             ServiceLocator.Instance.GameManager.SetState(State.Gameplay);
         }
-
-        public string StartClosing { get; set; }
-
+        
         private IEnumerator MoveCharacterTo(PlayerMover mover, Transform loc)
         {
             bool reached = false;
