@@ -5128,6 +5128,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1266771748659675050, guid: 31c506f474954fb4488c1acc90243d9e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2712164535648801982, guid: 31c506f474954fb4488c1acc90243d9e, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -11250,6 +11254,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9212160431401848036, guid: 6479317569b72c546b5f97d26ed4ad61, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11282,6 +11290,10 @@ PrefabInstance:
     - target: {fileID: 466797182511877386, guid: f77ce4b4acf404b49954968a68d851d4, type: 3}
       propertyPath: m_Name
       value: Akari Normal
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624987806024240964, guid: f77ce4b4acf404b49954968a68d851d4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7103443684195931852, guid: f77ce4b4acf404b49954968a68d851d4, type: 3}
       propertyPath: m_LocalPosition.x
