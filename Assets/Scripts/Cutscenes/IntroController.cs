@@ -37,8 +37,7 @@ namespace Cutscenes
         [SerializeField] private Image _blackScreen;
         private static readonly int Close = Animator.StringToHash("Close");
         private static readonly int StartClosing = Animator.StringToHash("StartClosing");
-
-
+        
         private void Start()
         {
             StartCoroutine(PlayIntro());
