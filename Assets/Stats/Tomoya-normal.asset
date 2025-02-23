@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df34756b6e444e2b9989f116a0aca1f8, type: 3}
   m_Name: Tomoya-normal
   m_EditorClassIdentifier: 
-  Acceleration: 3
+  Acceleration: 1.5
   Deceleration: 10
-  AirAcceleration: 3
+  AirAcceleration: 1.5
   AirDeceleration: 10
-  MaxSpeed: 10
-  JumpVelocity: 10
-  JumpShort: 5
+  MaxSpeed: 5
+  JumpVelocity: 5
+  JumpShort: 3
+  WallJumpVelocityX: 2.5
+  WallJumpVelocityY: 8
