@@ -16,7 +16,7 @@ namespace Menus
 
         private void Start()
         {
-            _menuRoot.transform.parent = null;
+            _menuRoot.transform.SetParent(null);
             DontDestroyOnLoad(_menuRoot.gameObject);
             foreach (var prefab in _prefabList)
             {

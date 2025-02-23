@@ -19,3 +19,4 @@ MonoBehaviour:
   MaxSpeed: 10
   JumpVelocity: 10
   JumpShort: 5
+  WallJumpVelocityX: 5

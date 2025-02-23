@@ -1,14 +1,10 @@
-﻿using System;
-using Services;
+﻿using Services;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Player
 {
     public class PlayerController : MonoBehaviour
     {
-        private InputAction _moveAction;
-        private InputAction _jumpAction;
         [SerializeField] private PlayerStats _stats;
         
         [SerializeField] private Rigidbody2D _rigidbody2D;
@@ -22,7 +18,7 @@ namespace Player
         // wall check
         [SerializeField] private BoxCollider2D _wallCollider;
         [SerializeField] private float _wallCheckLength = 0.05f;
-        
+
         private Vector2 _moveVelocity;
         private bool _facingRight = true;
         private bool _grounded;
@@ -34,11 +30,17 @@ namespace Player
         private bool _walled;
 
         private bool _canDoubleJump => _doubleJumpUnlocked && !_hasDoubleJumped;
+        private bool _canWallJump => !_grounded && _wallJumpUnlocked && _walled;
+        private bool _wallJumping => Time.timeSinceLevelLoad < _wallJumpEndTime;
+        private float _wallJumpEndTime;
+        private float _wallJumpDuration = 0.2f;
 
         private static readonly int _groundedParam = Animator.StringToHash("grounded");
         private static readonly int _hMoveParam = Animator.StringToHash("hMove");
         private static readonly int _yMoveParam = Animator.StringToHash("yMove");
-
+        private static readonly int Spawn = Animator.StringToHash("Spawn");
+        private static readonly int Transform = Animator.StringToHash("Transform");
+        
         private int _maxHealth = 3;
         private int _currentHealth;
         private bool _blockMove = false;
@@ -46,17 +48,14 @@ namespace Player
 
         private void Start()
         {
-            _moveAction = InputSystem.actions.FindAction("Move");
-            _jumpAction = InputSystem.actions.FindAction("Jump");
-
             ServiceLocator.Instance.GameManager.OnDoublejumpUnlocked += () => _doubleJumpUnlocked = true;
-
+            ServiceLocator.Instance.GameManager.OnWalljumpUnlocked += () => _wallJumpUnlocked = true;
             ServiceLocator.Instance.GameManager.RegisterPlayer(this);
             
             Reset();
         }
 
-        private void FixedUpdate()
+        public void OnFixedUpdate(float xDir)
         {
             if (_blockMove && Time.timeSinceLevelLoad > _unblockMoveTime)
             {
@@ -66,22 +65,22 @@ namespace Player
             GroundCheck();
             WallCheck();
 
-            Move(_moveAction.ReadValue<Vector2>().x);
+            Move(xDir);
         }
 
-        private void Update()
+        public void OnUpdate(bool jumpTriggered, bool jumpReleased)
         {
             if (_blockMove)
             {
                 return;
             }
             
-            if (_jumpAction.triggered)
+            if (jumpTriggered)
             {
                 Jump();
             }
 
-            if (!_grounded && _jumpAction.WasReleasedThisFrame())
+            if (!_grounded && jumpReleased)
             {
                 JumpCancel();
             }
@@ -106,9 +105,7 @@ namespace Player
             var direction = _facingRight ? Vector2.right : Vector2.left;
             var _wallHit = Physics2D.BoxCast(walledOrigin, walledSize, 0f, direction, _wallCheckLength, _groundLayer);
             _walled = _wallHit.collider != null;
-            if (_walled)
-            {
-            }
+            Debug.Log("Walled: " + _walled);
         }
 
         private void Move(float hMove)
@@ -121,25 +118,41 @@ namespace Player
             if (_grounded)
             {
                 change = hMove == 0 ? _stats.Deceleration : _stats.Acceleration;
-
             }
             else
             {
-                change = hMove == 0 ? _stats.AirDeceleration : _stats.AirAcceleration;
+                change = hMove == 0 ? _stats.AirDeceleration : _stats.AirAcceleration;                    
             }
 
-            if (hMove < 0)
+            if (_grounded)
             {
-                Face(false);
-            }
-            else if (hMove > 0)
-            {
-                Face(true);
+                if (hMove < 0)
+                {
+                    Face(false);
+                }
+                else if (hMove > 0)
+                {
+                    Face(true);
+                }                
             }
 
-            Vector2 targetVelocity = new Vector2(hMove * _stats.MaxSpeed, 0);
-            _moveVelocity = Vector2.Lerp(_moveVelocity, targetVelocity, change * Time.fixedDeltaTime);
-            _rigidbody2D.velocity = new Vector2(_moveVelocity.x, _rigidbody2D.velocity.y);
+
+            if (!_wallJumping)
+            {
+                Vector2 targetVelocity = new Vector2(hMove * _stats.MaxSpeed, 0);
+                _moveVelocity = Vector2.Lerp(_moveVelocity, targetVelocity, change * Time.fixedDeltaTime);                
+            }
+            else
+            {
+                _moveVelocity = _rigidbody2D.velocity;
+            }
+
+            float yVelocity = _rigidbody2D.velocity.y;
+            if (_walled)
+            {
+                //yVelocity = 0;
+            }
+            _rigidbody2D.velocity = new Vector2(_moveVelocity.x, yVelocity);
             
             _anim.SetBool(_groundedParam, _grounded);
             _anim.SetFloat(_hMoveParam, Mathf.Abs(hMove));
@@ -149,6 +162,7 @@ namespace Player
         private void Jump()
         {
             bool jump = false;
+             bool wallJump = false;
             if (_grounded)
             {
                 jump = true;
@@ -158,10 +172,25 @@ namespace Player
                 _hasDoubleJumped = true;
                 jump = true;
             }
+            else if (_canWallJump)
+            {
+                jump = true;
+                wallJump = true;
+            }
 
             if (jump)
             {
-                _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _stats.JumpVelocity);
+                if (wallJump)
+                {
+                    float xVelChange = _facingRight ? -_stats.WallJumpVelocityX : _stats.WallJumpVelocityX;
+                    _rigidbody2D.velocity = new Vector2(xVelChange, _stats.JumpVelocity);
+                    _wallJumpEndTime = Time.timeSinceLevelLoad + _wallJumpDuration;
+                    Face(!_facingRight);
+                }
+                else
+                {
+                    _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _stats.JumpVelocity);                    
+                }
             }
         }
 
@@ -173,7 +202,7 @@ namespace Player
             }
         }
 
-        private void Face(bool right)
+        public void Face(bool right)
         {
             bool rotate = false;
             if (right && !_facingRight)
@@ -226,6 +255,12 @@ namespace Player
         public void Reset()
         {
             _currentHealth = _maxHealth;
+            _rigidbody2D.velocity = Vector2.zero;
+            _anim.SetTrigger(Spawn);
+        }
+
+        public void StopHorizontalMovement()
+        {
             _rigidbody2D.velocity = Vector2.zero;
         }
     }

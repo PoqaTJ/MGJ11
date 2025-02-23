@@ -51,6 +51,7 @@ namespace Game
                 _player.transform.position.z);
             _player.Reset();
             _player.gameObject.SetActive(true);
+            OnPlayerSpawn?.Invoke();
         }
 
         public void SetState(State state)
@@ -66,6 +67,9 @@ namespace Game
             {
                 case State.MainMenu:
                     SceneManager.LoadSceneAsync("Main");
+                    break;
+                case State.Intro:
+                    SceneManager.LoadSceneAsync("Intro");
                     break;
                 case State.Gameplay:
                     SceneManager.LoadSceneAsync("Gameplay");
@@ -101,6 +105,7 @@ namespace Game
     {
         MainMenu,
         Gameplay,
-        Debug
+        Debug,
+        Intro
     }
 }
