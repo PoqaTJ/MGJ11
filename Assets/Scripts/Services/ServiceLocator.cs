@@ -42,5 +42,6 @@ namespace Services
         public GameManager GameManager;
         public MenuManager MenuManager;
         public DialogManager DialogManager;
+        public SaveManager SaveManager;
     }
 }

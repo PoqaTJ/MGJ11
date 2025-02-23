@@ -105,7 +105,6 @@ namespace Player
             var direction = _facingRight ? Vector2.right : Vector2.left;
             var _wallHit = Physics2D.BoxCast(walledOrigin, walledSize, 0f, direction, _wallCheckLength, _groundLayer);
             _walled = _wallHit.collider != null;
-            Debug.Log("Walled: " + _walled);
         }
 
         private void Move(float hMove)

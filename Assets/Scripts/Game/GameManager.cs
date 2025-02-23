@@ -23,6 +23,11 @@ namespace Game
         private PlayerController _player;
         private PlayerSpawner _spawner;
 
+        [SerializeField] GameObject _akariNormalPrefab;
+        [SerializeField] GameObject _akariTFPrefab;
+        [SerializeField] GameObject _tomoyaNormalPrefab;
+        [SerializeField] GameObject _tomoyaTFPrefab;
+        
         private void Start()
         {
             OnPlayerDied += OnPlayerDeath;
@@ -49,8 +54,8 @@ namespace Game
             yield return new WaitForSeconds(0.5f);
             _player.transform.position = new Vector3(_spawner.transform.position.x, _spawner.transform.position.y,
                 _player.transform.position.z);
-            _player.Reset();
             _player.gameObject.SetActive(true);
+            _player.Reset();
             OnPlayerSpawn?.Invoke();
         }
 
@@ -98,6 +103,11 @@ namespace Game
         public void RegisterPlayer(PlayerController playerController)
         {
             _player = playerController;
+        }
+
+        private IEnumerator PlayerDiesRoutine()
+        {
+            yield return null;
         }
     }
 

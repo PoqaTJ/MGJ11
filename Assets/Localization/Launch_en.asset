@@ -82,6 +82,42 @@ MonoBehaviour:
     m_Localized: Prism
     m_Metadata:
       m_Items: []
+  - m_Id: 5113885470031872
+    m_Localized: Delete Save
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5114068673036288
+    m_Localized: Delete Save?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5114104421089280
+    m_Localized: This cannot be undone.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5114166408708096
+    m_Localized: Cancel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5114214836142080
+    m_Localized: Confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5117290204692480
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5117217232191488
+    m_Localized: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5119548841590784
+    m_Localized: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5119589891244032
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
