@@ -15,5 +15,8 @@ namespace Player
         // jump
         public float JumpVelocity = 10f;
         public float JumpShort = 5f;
+        
+        // wall jump
+        public float WallJumpVelocityX = 2.5f;
     }
 }
