@@ -23,13 +23,17 @@ namespace Cutscenes
         [SerializeField] private Transform _tomoyaPosition2;
 
 
-        [SerializeField] private ConversationDefinition _conversation1;
-        [SerializeField] private ConversationDefinition _boredConversation;
+        [SerializeField] private ConversationDefinition _convoAarriveAtPortal;
+        [SerializeField] private ConversationDefinition _tomoyaArriveAtPortal;
+        [SerializeField] private ConversationDefinition _boredConversation1;
+        [SerializeField] private ConversationDefinition _boredConversation2;
         [SerializeField] private ConversationDefinition _portalClosingConversation;
 
         [SerializeField] private Animator _portalController;
         [SerializeField] private Transform _portalLocation;
 
+        [SerializeField] private ButterflyController _butterflyController;
+        
         [SerializeField] private Image _blackScreen;
         private static readonly int Close = Animator.StringToHash("Close");
 
@@ -43,25 +47,27 @@ namespace Cutscenes
             yield return new WaitForSeconds(0.5f);
 
             bool akariReached1 = false;
-            bool tomoyaReached1 = false;
+            bool butterflyReached1 = false;
+
             _akariNormal.MoveTo(_akariPosition1, () =>
             {
                 _akariNormal.Face(PlayerMover.Direction.LEFT);
                 akariReached1 = true;
             });
-            _tomoyaNormal.MoveTo(_tomoyaPosition1, () =>
+            _butterflyController.MoveTo(_akariPosition1, () =>
             {
-                _tomoyaNormal.Face(PlayerMover.Direction.RIGHT);
-                tomoyaReached1 = true;
+                _butterflyController.Face(ButterflyController.Direction.LEFT);
+                butterflyReached1 = true;
             });
 
-            yield return new WaitUntil(()=> akariReached1 && tomoyaReached1);
+            yield return new WaitUntil(()=> akariReached1 && butterflyReached1);
             yield return new WaitForSeconds(0.1f);
 
-            bool convOver = false;
-            ServiceLocator.Instance.DialogManager.StartConversation(_conversation1, () => convOver = true);
+            ServiceLocator.Instance.DialogManager.StartConversation(_convoAarriveAtPortal, null);
+
+            yield return MoveCharacterTo(_tomoyaNormal, _tomoyaPosition1);
             
-            yield return new WaitUntil(()=> convOver);
+            ServiceLocator.Instance.DialogManager.StartConversation(_tomoyaArriveAtPortal, null);
 
             yield return new WaitForSeconds(0.2f);
             
@@ -69,22 +75,26 @@ namespace Cutscenes
             
             yield return new WaitForSeconds(0.2f);
 
+            _butterflyController.Disappear();
             yield return ShowDebugDialog("Akari transformation");
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(1f);
 
             _portalController.gameObject.SetActive(true);
             yield return new WaitForSeconds(1.5f);
-            
+           
             yield return MoveCharacterTo(_akariNormal, _portalLocation);
             _akariNormal.gameObject.SetActive(false);
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(1f);
 
             yield return FadeToBlack();
             yield return new WaitForSeconds(2f);
+
             yield return FadeFromBlack();
 
             yield return MoveCharacterTo(_tomoyaNormal, _tomoyaPosition2);
             yield return new WaitForSeconds(0.1f);
+
+            ServiceLocator.Instance.DialogManager.StartConversation(_boredConversation1, null);
 
             yield return MoveCharacterTo(_tomoyaNormal, _tomoyaPosition1);
             yield return new WaitForSeconds(0.1f);
@@ -95,13 +105,13 @@ namespace Cutscenes
             _tomoyaNormal.Face(PlayerMover.Direction.RIGHT);
             yield return new WaitForSeconds(0.2f);
             
-            ServiceLocator.Instance.DialogManager.StartConversation(_boredConversation, () => convOver = true);
+            ServiceLocator.Instance.DialogManager.StartConversation(_boredConversation2, null);
             
             yield return new WaitForSeconds(0.2f);
             _portalController.SetTrigger(StartClosing);
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(2f);
 
-            ServiceLocator.Instance.DialogManager.StartConversation(_boredConversation, () => convOver = true);
+            ServiceLocator.Instance.DialogManager.StartConversation(_portalClosingConversation, null);
 
             yield return MoveCharacterTo(_tomoyaNormal, _portalLocation);
             _tomoyaNormal.gameObject.SetActive(false);
