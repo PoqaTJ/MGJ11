@@ -5016,14 +5016,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tomoya-normal
       objectReference: {fileID: 0}
+    - target: {fileID: 7511788312523762159, guid: 31c506f474954fb4488c1acc90243d9e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8967601192410819495, guid: 31c506f474954fb4488c1acc90243d9e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5485015936673299940, guid: 31c506f474954fb4488c1acc90243d9e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 486132964}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31c506f474954fb4488c1acc90243d9e, type: 3}
+--- !u!114 &274818588 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8967601192410819495, guid: 31c506f474954fb4488c1acc90243d9e, type: 3}
+  m_PrefabInstance: {fileID: 274818587}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a5f2615dc2b49cbbc292a30f3d33b73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &390977395
 GameObject:
   m_ObjectHideFlags: 0
@@ -5092,35 +5108,6 @@ Transform:
   - {fileID: 619004290}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &486132955 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5485015936673299940, guid: 31c506f474954fb4488c1acc90243d9e, type: 3}
-  m_PrefabInstance: {fileID: 274818587}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &486132959 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2975482574126119129, guid: 31c506f474954fb4488c1acc90243d9e, type: 3}
-  m_PrefabInstance: {fileID: 274818587}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486132955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 752a9128b9694340bfe450f82309d5ef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &486132964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486132955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a5f2615dc2b49cbbc292a30f3d33b73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _playerController: {fileID: 486132959}
 --- !u!1 &551686824
 GameObject:
   m_ObjectHideFlags: 0
@@ -10435,17 +10422,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!114 &1764371649 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3251233397853481896, guid: f77ce4b4acf404b49954968a68d851d4, type: 3}
-  m_PrefabInstance: {fileID: 8153330295205263835}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a5f2615dc2b49cbbc292a30f3d33b73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!95 &1764371652 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 689969318414437953, guid: f77ce4b4acf404b49954968a68d851d4, type: 3}
@@ -10677,9 +10653,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c70ee8621cb4968ab80a5a53af0774d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _akariNormal: {fileID: 1764371649}
+  _akariNormal: {fileID: 8153330295205263836}
   _akariTransformed: {fileID: 6203647888390198609}
-  _tomoyaNormal: {fileID: 486132964}
+  _tomoyaNormal: {fileID: 274818588}
   _akariPosition1: {fileID: 551686825}
   _tomoyaPosition1: {fileID: 1803559419}
   _tomoyaPosition2: {fileID: 551686825}
@@ -10772,6 +10748,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1314770641047902441, guid: 6479317569b72c546b5f97d26ed4ad61, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2473287384977198762, guid: 6479317569b72c546b5f97d26ed4ad61, type: 3}
       propertyPath: m_Name
       value: Akari Transformed
@@ -10835,7 +10815,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 6479317569b72c546b5f97d26ed4ad61, type: 3}
 --- !u!114 &6203647888390198609 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 663779400435771400, guid: 6479317569b72c546b5f97d26ed4ad61, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1314770641047902441, guid: 6479317569b72c546b5f97d26ed4ad61, type: 3}
   m_PrefabInstance: {fileID: 6203647888390198608}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -10913,6 +10893,17 @@ PrefabInstance:
       addedObject: {fileID: 173941559}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f77ce4b4acf404b49954968a68d851d4, type: 3}
+--- !u!114 &8153330295205263836 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3897729941743508297, guid: f77ce4b4acf404b49954968a68d851d4, type: 3}
+  m_PrefabInstance: {fileID: 8153330295205263835}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a5f2615dc2b49cbbc292a30f3d33b73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
