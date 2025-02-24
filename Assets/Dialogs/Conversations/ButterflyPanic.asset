@@ -30,16 +30,16 @@ MonoBehaviour:
     Text: No choice?
     Side: 0
   - Character: 2
-    Text: 'The original plan: making you into a magical girl!'
+    Text: The original plan of making you into a magical girl!
     Side: 1
   - Character: 0
-    Text: Wait wait wait! I already told you!
+    Text: Wait, I already turned this down!
     Side: 0
   - Character: 0
     Text: I'm not qualified as Akari!
     Side: 0
   - Character: 0
-    Text: I'm too jaded with humanity for the magical girl gig!
+    Text: I'm too jaded with humanity for this gig.
     Side: 0
   - Character: 2
     Text: Pish posh. You want to protect people. You still took up guard duty.
@@ -52,17 +52,23 @@ MonoBehaviour:
     Text: I didn't take you for a political junkie.
     Side: 0
   - Character: 2
-    Text: Politics is about power! The power of magical girls compells you!
+    Text: Politics is about power!
     Side: 1
   - Character: 0
-    Text: Woah, this feels weird!
-    Side: 0
-  - Character: 0
-    Text: Should I be doing something now?
-    Side: 0
-  - Character: 2
-    Text: Let the power spin around you!
+    Text: You're not wrong.
     Side: 1
   - Character: 2
-    Text: If you can't think of anything, just spin around!
+    Text: The power of magical girls compells you!
+    Side: 1
+  - Character: 0
+    Text: Woah, this feels weird.
+    Side: 0
+  - Character: 0
+    Text: Should I be doing a song or dance or something?
+    Side: 0
+  - Character: 2
+    Text: Let the power spin around you.
+    Side: 1
+  - Character: 2
+    Text: Don't think too hard about it.
     Side: 1
