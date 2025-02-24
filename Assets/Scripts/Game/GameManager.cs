@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using Player;
+using Services;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -77,7 +78,7 @@ namespace Game
                     SceneManager.LoadSceneAsync("Intro");
                     break;
                 case State.Gameplay:
-                    SceneManager.LoadSceneAsync("Gameplay");
+                    LoadGameplay();
                     break;
                 case State.Debug:
                     SceneManager.LoadSceneAsync("Debug");
@@ -85,6 +86,19 @@ namespace Game
             }
         }
 
+        private void LoadGameplay()
+        {
+            int level = ServiceLocator.Instance.SaveManager.Level;
+            if (level == 0)
+            {
+                SceneManager.LoadSceneAsync("LevelOne");
+            }
+            else
+            {
+                SceneManager.LoadSceneAsync("Gameplay");
+            }
+        }
+        
         public void UnlockDoubleJump()
         {
             OnDoublejumpUnlocked?.Invoke();
