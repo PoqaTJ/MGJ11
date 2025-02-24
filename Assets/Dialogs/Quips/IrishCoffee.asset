@@ -15,5 +15,5 @@ MonoBehaviour:
   ID: IrishCoffee
   dialog:
     Character: 0
-    Text: I wonder what Irish Coffee is. Maybe it has green foam?
+    Text: (I wonder what Irish Coffee is. Maybe it has green foam?)
     Side: 0

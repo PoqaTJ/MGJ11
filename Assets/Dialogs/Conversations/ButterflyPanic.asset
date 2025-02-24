@@ -27,40 +27,41 @@ MonoBehaviour:
     Text: We have no choice now.
     Side: 1
   - Character: 0
-    Text: No choice... to do what?
+    Text: No choice?
     Side: 0
   - Character: 2
-    Text: Make you into a magical girl!
+    Text: 'The original plan: making you into a magical girl!'
     Side: 1
   - Character: 0
-    Text: Wait wait wait! Are you sure about this?
+    Text: Wait wait wait! I already told you!
     Side: 0
   - Character: 0
-    Text: I'm not exactly qualified like Akari.
+    Text: I'm not qualified as Akari!
+    Side: 0
+  - Character: 0
+    Text: I'm too jaded with humanity for the magical girl gig!
     Side: 0
   - Character: 2
-    Text: Oh pish posh. You've already done the legwork by being Akari's portal guardian
-      for all of her trips.
+    Text: Pish posh. You want to protect people. You still took up guard duty.
     Side: 1
   - Character: 2
-    Text: That boots-on-the-ground approach makes you more qualified for magic than
-      half the politicians in this municipality.
+    Text: That boots-on-the-ground action shows more dedication than the promises
+      of politicians.
     Side: 1
   - Character: 0
     Text: I didn't take you for a political junkie.
     Side: 0
   - Character: 2
-    Text: Politics is about power. And now the power of the magical girl compells
-      you!
+    Text: Politics is about power! The power of magical girls compells you!
     Side: 1
   - Character: 0
     Text: Woah, this feels weird!
     Side: 0
   - Character: 0
-    Text: Should I be doing something right now?
+    Text: Should I be doing something now?
     Side: 0
   - Character: 2
-    Text: Move in whatever way feels good!
+    Text: Let the power spin around you!
     Side: 1
   - Character: 2
     Text: If you can't think of anything, just spin around!
