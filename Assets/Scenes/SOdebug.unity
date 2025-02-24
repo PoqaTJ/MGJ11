@@ -16647,6 +16647,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tomoya Normal
       objectReference: {fileID: 0}
+    - target: {fileID: 7753432301891738235, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17467,7 +17471,7 @@ Transform:
   m_GameObject: {fileID: 1616593295}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.02956174, y: 0.05562997, z: -10}
+  m_LocalPosition: {x: -0.022934534, y: 0.055619955, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20540,6 +20544,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _conversation: {fileID: 11400000, guid: de1903a9a78c9d4498623e48367e832b, type: 2}
+  _onDoneEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1883726205
 GameObject:
   m_ObjectHideFlags: 0

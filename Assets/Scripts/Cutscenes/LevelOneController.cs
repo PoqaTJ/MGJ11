@@ -22,7 +22,22 @@ namespace Cutscenes
 
         private static readonly int StartTransform = Animator.StringToHash("TransformStart");
         private static readonly int StopTransform = Animator.StringToHash("TransformEnd");
-        
+
+        private void Start()
+        {
+            ServiceLocator.Instance.GameManager.OnPlayerSpawn += (controller) =>
+            {
+                if (ServiceLocator.Instance.SaveManager.Transformed)
+                {
+                    _tomoyaMagicalAnimator = controller.GetComponent<Animator>();                    
+                }
+                else
+                {
+                    _tomoyaNormalAnimator = controller.GetComponent<Animator>();
+                }
+            };
+        }
+
         public void StartTransformationSequence()
         {
             StartCoroutine(TransformationRoutine());
@@ -31,6 +46,11 @@ namespace Cutscenes
         private IEnumerator TransformationRoutine()
         {
             // stop tomoya input
+            _tomoyaNormalInput.enabled = false;
+            PlayerMover tomoyaMover = _tomoyaNormalInput.gameObject.GetComponent<PlayerMover>();
+            tomoyaMover.enabled = true;
+
+            yield return MoveCharacterTo(tomoyaMover, _transformationLocation);
             
             // fly to Tomoya
             bool reached = false;
@@ -64,7 +84,9 @@ namespace Cutscenes
             
             _tomoyaMagicalAnimator.SetTrigger(StopTransform);
 
-            yield return new WaitForSeconds(2f);
+            ServiceLocator.Instance.SaveManager.Transformed = true;
+            
+            yield return new WaitForSeconds(1f);
             _tomoyaMagicalInput.enabled = true;
         }
     }

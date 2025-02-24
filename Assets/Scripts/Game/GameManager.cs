@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using Cinemachine;
 using Player;
 using Services;
 using UnityEngine;
@@ -15,7 +16,7 @@ namespace Game
         public Action OnWalljumpUnlocked;
         public Action OnPlayerDied;
         public Action OnPlayerTakeDamage;
-        public Action OnPlayerSpawn;
+        public Action<PlayerController> OnPlayerSpawn;
 
         #endregion
         
@@ -28,7 +29,7 @@ namespace Game
         [SerializeField] GameObject _akariTFPrefab;
         [SerializeField] GameObject _tomoyaNormalPrefab;
         [SerializeField] GameObject _tomoyaTFPrefab;
-        
+
         private void Start()
         {
             OnPlayerDied += OnPlayerDeath;
@@ -52,12 +53,18 @@ namespace Game
 
         private IEnumerator SpawnPlayer()
         {
-            yield return new WaitForSeconds(0.5f);
+            Destroy(_player.gameObject);
+            GameObject prefab = ServiceLocator.Instance.SaveManager.Transformed ? _tomoyaTFPrefab : _tomoyaNormalPrefab;
+            GameObject playerObject = Instantiate(prefab);
+            playerObject.SetActive(false);
+            _player = playerObject.GetComponent<PlayerController>();
             _player.transform.position = new Vector3(_spawner.transform.position.x, _spawner.transform.position.y,
                 _player.transform.position.z);
+            GameObject.Find("Virtual Camera").GetComponent<CinemachineVirtualCamera>().Follow = _player.transform;
+            yield return new WaitForSeconds(0.5f);
             _player.gameObject.SetActive(true);
             _player.Reset();
-            OnPlayerSpawn?.Invoke();
+            OnPlayerSpawn?.Invoke(_player);
         }
 
         public void SetState(State state)

@@ -49,6 +49,16 @@ namespace Game
             }
         }
         
+        public bool Transformed
+        {
+            get => _save.Transformed;
+            set
+            {
+                _save.Transformed = value;
+                Save();
+            }
+        }
+        
         public int Level
         {
             get => _save.Level;

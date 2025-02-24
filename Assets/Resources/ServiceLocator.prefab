@@ -96,10 +96,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a184f10f010a4cc1aa772b872842fa0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _akariNormalPrefab: {fileID: 0}
-  _akariTFPrefab: {fileID: 0}
-  _tomoyaNormalPrefab: {fileID: 0}
-  _tomoyaTFPrefab: {fileID: 0}
+  _akariNormalPrefab: {fileID: 466797182511877386, guid: f77ce4b4acf404b49954968a68d851d4, type: 3}
+  _akariTFPrefab: {fileID: 2473287384977198762, guid: 6479317569b72c546b5f97d26ed4ad61, type: 3}
+  _tomoyaNormalPrefab: {fileID: 5485015936673299940, guid: 31c506f474954fb4488c1acc90243d9e, type: 3}
+  _tomoyaTFPrefab: {fileID: 5485015936673299940, guid: ac5a1a65561d37a41bfb1935deef356d, type: 3}
 --- !u!1 &2709043289160830868
 GameObject:
   m_ObjectHideFlags: 0
