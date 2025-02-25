@@ -27,10 +27,11 @@ namespace Player
         private bool _hasDoubleJumped;
 
         private bool _wallJumpUnlocked;
+        private bool _hasWallJumped;
         private bool _walled;
 
         private bool _canDoubleJump => _doubleJumpUnlocked && !_hasDoubleJumped;
-        private bool _canWallJump => !_grounded && _wallJumpUnlocked && _walled;
+        private bool _canWallJump => !_grounded && _wallJumpUnlocked && _walled && !_hasWallJumped;
         private bool _wallJumping => Time.timeSinceLevelLoad < _wallJumpEndTime;
         private float _wallJumpEndTime;
         private float _wallJumpDuration = 0.2f;
@@ -94,8 +95,14 @@ namespace Player
             _grounded = _groundHit.collider != null;
             if (_grounded)
             {
+                _hasWallJumped = false;
                 _hasDoubleJumped = false;
             }
+
+            Color rayColor = _grounded ? Color.green : Color.red;
+            Debug.DrawRay(new Vector2(groundedOrigin.x - groundedSize.x / 2, groundedOrigin.y), Vector2.down * _groundedCheckLength, rayColor);
+            Debug.DrawRay(new Vector2(groundedOrigin.x + groundedSize.x / 2, groundedOrigin.y), Vector2.down * _groundedCheckLength, rayColor);
+            Debug.DrawRay(new Vector2(groundedOrigin.x - groundedSize.x / 2, groundedOrigin.y - _groundedCheckLength), Vector2.right * groundedSize, rayColor);
         }
 
         private void WallCheck()
@@ -160,11 +167,6 @@ namespace Player
 
         private void Jump(float xDir)
         {
-            if (xDir != 0)
-            {
-                Face(xDir > 0);                
-            }
-
             bool jump = false;
             bool wallJump = false;
             if (_grounded)
@@ -186,15 +188,21 @@ namespace Player
             {
                 if (wallJump)
                 {
+                    _hasWallJumped = true;
                     float xVelChange = _facingRight ? -_stats.WallJumpVelocityX : _stats.WallJumpVelocityX;
                     _moveVelocity = Vector2.zero;
                     _rigidbody2D.velocity = new Vector2(xVelChange, _stats.WallJumpVelocityY);
                     _wallJumpEndTime = Time.timeSinceLevelLoad + _wallJumpDuration;
                     Face(!_facingRight);
+                    Debug.Log($"facingRight: {_facingRight}");
                 }
                 else
                 {
                     _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x, _stats.JumpVelocity);                    
+                    if (xDir != 0)
+                    {
+                        Face(xDir > 0);                
+                    }
                 }
             }
         }
