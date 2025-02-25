@@ -5,11 +5,11 @@ namespace Platforms
 {
     public class RotatingHazard: MonoBehaviour
     {
-        [SerializeField] private float _rotationSpeed = 1f;
+        [SerializeField] private float _speed = 1f;
 
-        private void Update()
+        private void FixedUpdate()
         {
-            transform.Rotate(new Vector3(0, 0, _rotationSpeed));
+            transform.Rotate(new Vector3(0, 0, _speed));
         }
     }
 }
