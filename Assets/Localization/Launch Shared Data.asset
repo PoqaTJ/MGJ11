@@ -107,6 +107,22 @@ MonoBehaviour:
     m_Key: mm-button-continue
     m_Metadata:
       m_Items: []
+  - m_Id: 5585839645220864
+    m_Key: dialog-powerup-triple-jump-title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5585964123774976
+    m_Key: dialog-powerup-triple-jump-button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5586636592340992
+    m_Key: dialog-powerup-wall-jump-title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5586710848299008
+    m_Key: dialog-powerup-triple-jump-body
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
