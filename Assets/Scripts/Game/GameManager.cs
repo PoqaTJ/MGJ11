@@ -13,6 +13,7 @@ namespace Game
         #region events
 
         public Action OnDoublejumpUnlocked;
+        public Action OnTriplejumpUnlocked;
         public Action OnWalljumpUnlocked;
         public Action OnPlayerDied;
         public Action OnPlayerTakeDamage;
@@ -109,6 +110,11 @@ namespace Game
         public void UnlockDoubleJump()
         {
             OnDoublejumpUnlocked?.Invoke();
+        }
+        
+        public void UnlockTripleJump()
+        {
+            OnTriplejumpUnlocked?.Invoke();
         }
 
         public void UnlockWallJump()

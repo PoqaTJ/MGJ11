@@ -26,11 +26,15 @@ namespace Player
         private bool _doubleJumpUnlocked;
         private bool _hasDoubleJumped;
 
+        private bool _tripleJumpUnlocked;
+        private bool _hasTripleJumped;
+
         private bool _wallJumpUnlocked;
         private bool _hasWallJumped;
         private bool _walled;
 
         private bool _canDoubleJump => _doubleJumpUnlocked && !_hasDoubleJumped;
+        private bool _canTripleJump => _tripleJumpUnlocked && !_hasTripleJumped;
         private bool _canWallJump => !_grounded && _wallJumpUnlocked && _walled && !_hasWallJumped;
         private bool _wallJumping => Time.timeSinceLevelLoad < _wallJumpEndTime;
         private float _wallJumpEndTime;
@@ -50,6 +54,8 @@ namespace Player
         private void Start()
         {
             ServiceLocator.Instance.GameManager.OnDoublejumpUnlocked += () => _doubleJumpUnlocked = true;
+            ServiceLocator.Instance.GameManager.OnTriplejumpUnlocked += () => _tripleJumpUnlocked = true;
+
             ServiceLocator.Instance.GameManager.OnWalljumpUnlocked += () => _wallJumpUnlocked = true;
             ServiceLocator.Instance.GameManager.RegisterPlayer(this);
             
@@ -97,6 +103,7 @@ namespace Player
             {
                 _hasWallJumped = false;
                 _hasDoubleJumped = false;
+                _hasTripleJumped = false;
             }
 
             Color rayColor = _grounded ? Color.green : Color.red;
@@ -173,17 +180,22 @@ namespace Player
             {
                 jump = true;
             }
-            else if (_canDoubleJump)
-            {
-                _hasDoubleJumped = true;
-                jump = true;
-            }
             else if (_canWallJump)
             {
                 jump = true;
                 wallJump = true;
             }
-
+            else if (_canDoubleJump)
+            {
+                _hasDoubleJumped = true;
+                jump = true;
+            }
+            else if (_canTripleJump)
+            {
+                _hasTripleJumped = true;
+                jump = true;
+            }
+            
             if (jump)
             {
                 if (wallJump)

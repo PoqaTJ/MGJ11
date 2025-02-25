@@ -110,6 +110,22 @@ MonoBehaviour:
     m_Localized: Continue
     m_Metadata:
       m_Items: []
+  - m_Id: 5585839645220864
+    m_Localized: Triple Jump
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5585964123774976
+    m_Localized: Sweet!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5586636592340992
+    m_Localized: Wall Jump
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5586710848299008
+    m_Localized: You can now jump again in mid-air, again!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
