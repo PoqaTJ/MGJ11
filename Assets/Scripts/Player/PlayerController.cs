@@ -37,6 +37,10 @@ namespace Player
         private bool _canTripleJump => _tripleJumpUnlocked && !_hasTripleJumped;
         private bool _canWallJump => !_grounded && _wallJumpUnlocked && _walled && !_hasWallJumped;
         private bool _wallJumping => Time.timeSinceLevelLoad < _wallJumpEndTime;
+        private bool _canCoyoteJump => _coyotetimer > 0 && !_grounded && !_hasDoubleJumped && !_hasTripleJumped && !_hasWallJumped;
+
+        private float _coyotetimer;
+        
         private float _wallJumpEndTime;
         private float _wallJumpDuration = 0.2f;
 
@@ -50,6 +54,8 @@ namespace Player
         private int _currentHealth;
         private bool _blockMove = false;
         private float _unblockMoveTime;
+
+        private bool _groundedLastFrame = false;
 
         private void Start()
         {
@@ -91,6 +97,11 @@ namespace Player
             {
                 JumpCancel();
             }
+
+            if (_coyotetimer > 0)
+            {
+                _coyotetimer -= Time.deltaTime;
+            }
         }
 
         private void GroundCheck()
@@ -106,10 +117,11 @@ namespace Player
                 _hasTripleJumped = false;
             }
 
-            Color rayColor = _grounded ? Color.green : Color.red;
-            Debug.DrawRay(new Vector2(groundedOrigin.x - groundedSize.x / 2, groundedOrigin.y), Vector2.down * _groundedCheckLength, rayColor);
-            Debug.DrawRay(new Vector2(groundedOrigin.x + groundedSize.x / 2, groundedOrigin.y), Vector2.down * _groundedCheckLength, rayColor);
-            Debug.DrawRay(new Vector2(groundedOrigin.x - groundedSize.x / 2, groundedOrigin.y - _groundedCheckLength), Vector2.right * groundedSize, rayColor);
+            if (_groundedLastFrame && !_grounded)
+            {
+                _coyotetimer = _stats.CoyoteDuration;
+            }
+            _groundedLastFrame = _grounded;
         }
 
         private void WallCheck()
@@ -176,7 +188,7 @@ namespace Player
         {
             bool jump = false;
             bool wallJump = false;
-            if (_grounded)
+            if (_grounded || _canCoyoteJump)
             {
                 jump = true;
             }
