@@ -187,6 +187,7 @@ namespace Player
                 if (wallJump)
                 {
                     float xVelChange = _facingRight ? -_stats.WallJumpVelocityX : _stats.WallJumpVelocityX;
+                    _moveVelocity = Vector2.zero;
                     _rigidbody2D.velocity = new Vector2(xVelChange, _stats.WallJumpVelocityY);
                     _wallJumpEndTime = Time.timeSinceLevelLoad + _wallJumpDuration;
                     Face(!_facingRight);
@@ -244,6 +245,7 @@ namespace Player
             {
                 float xdir = location.x < transform.position.x ? 1 : -1;
                 _rigidbody2D.velocity = new Vector2(xdir, 1) * 5;
+                _moveVelocity = Vector2.zero;
                 _blockMove = true;
                 _unblockMoveTime = Time.timeSinceLevelLoad + 0.2f;
                 ServiceLocator.Instance.GameManager.OnPlayerTakeDamage?.Invoke();
