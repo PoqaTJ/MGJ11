@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a48453cb85647658ed9d092c933952a, type: 3}
   m_Name: Floating3
   m_EditorClassIdentifier: 
-  ID: 
+  ID: Floating3
   dialog:
     Character: 0
-    Text: 
+    Text: Oh no, I'm getting used to this.
     Side: 0

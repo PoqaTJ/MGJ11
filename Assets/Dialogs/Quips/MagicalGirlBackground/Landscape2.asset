@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a48453cb85647658ed9d092c933952a, type: 3}
   m_Name: Landscape2
   m_EditorClassIdentifier: 
-  ID: HorrorGenre
+  ID: Landscape2
   dialog:
     Character: 0
-    Text: I can't even sit through horror moLansvies unless Akari is right next to
-      me.
+    Text: I can't even stand horror movies.
     Side: 0

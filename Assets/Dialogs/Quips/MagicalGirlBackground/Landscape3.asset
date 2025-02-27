@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a48453cb85647658ed9d092c933952a, type: 3}
   m_Name: Landscape3
   m_EditorClassIdentifier: 
-  ID: 
+  ID: Landscape3
   dialog:
     Character: 0
-    Text: 
+    Text: I can only make it through the horror genre unless Akari constantly holds
+      my hand.
     Side: 0
