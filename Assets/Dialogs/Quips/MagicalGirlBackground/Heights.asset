@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a48453cb85647658ed9d092c933952a, type: 3}
   m_Name: Heights
   m_EditorClassIdentifier: 
-  ID: FearOfHeights
+  ID: Heights
   dialog:
     Character: 0
     Text: Normally I have a fear of heights!

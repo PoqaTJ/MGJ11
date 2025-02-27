@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a48453cb85647658ed9d092c933952a, type: 3}
   m_Name: Heights2
   m_EditorClassIdentifier: 
-  ID: 
+  ID: Heights2
   dialog:
     Character: 0
-    Text: 
+    Text: Thankfully I have float-down powers now.
     Side: 0
