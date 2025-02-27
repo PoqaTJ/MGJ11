@@ -19,5 +19,6 @@ MonoBehaviour:
   MaxSpeed: 3
   JumpVelocity: 5
   JumpShort: 3
+  CoyoteDuration: 0.1
   WallJumpVelocityX: 2.5
   WallJumpVelocityY: 8
