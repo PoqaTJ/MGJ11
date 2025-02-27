@@ -30,14 +30,14 @@ namespace Player
         private bool _hasTripleJumped;
 
         private bool _wallJumpUnlocked;
-        private bool _hasWallJumped;
         private bool _walled;
+
 
         private bool _canDoubleJump => _doubleJumpUnlocked && !_hasDoubleJumped;
         private bool _canTripleJump => _tripleJumpUnlocked && !_hasTripleJumped;
-        private bool _canWallJump => !_grounded && _wallJumpUnlocked && _walled && !_hasWallJumped;
+        private bool _canWallJump => !_grounded && _wallJumpUnlocked && _walled;
         private bool _wallJumping => Time.timeSinceLevelLoad < _wallJumpEndTime;
-        private bool _canCoyoteJump => _coyotetimer > 0 && !_grounded && !_hasDoubleJumped && !_hasTripleJumped && !_hasWallJumped;
+        private bool _canCoyoteJump => _coyotetimer > 0 && !_grounded && !_hasDoubleJumped && !_hasTripleJumped;
 
         private float _coyotetimer;
         
@@ -112,7 +112,6 @@ namespace Player
             _grounded = _groundHit.collider != null;
             if (_grounded)
             {
-                _hasWallJumped = false;
                 _hasDoubleJumped = false;
                 _hasTripleJumped = false;
             }
@@ -188,22 +187,31 @@ namespace Player
         {
             bool jump = false;
             bool wallJump = false;
-            if (_grounded || _canCoyoteJump)
+            if (_grounded)
             {
+                Debug.Log("Normal jump!");
+                jump = true;
+            }
+            else if (_canCoyoteJump)
+            {
+                Debug.Log("Coyote jump!");
                 jump = true;
             }
             else if (_canWallJump)
             {
+                Debug.Log("Wall jump!");
                 jump = true;
                 wallJump = true;
             }
             else if (_canDoubleJump)
             {
+                Debug.Log("Double jump!");
                 _hasDoubleJumped = true;
                 jump = true;
             }
             else if (_canTripleJump)
             {
+                Debug.Log("Triple jump!");
                 _hasTripleJumped = true;
                 jump = true;
             }
@@ -212,13 +220,12 @@ namespace Player
             {
                 if (wallJump)
                 {
-                    _hasWallJumped = true;
+
                     float xVelChange = _facingRight ? -_stats.WallJumpVelocityX : _stats.WallJumpVelocityX;
                     _moveVelocity = Vector2.zero;
                     _rigidbody2D.velocity = new Vector2(xVelChange, _stats.WallJumpVelocityY);
                     _wallJumpEndTime = Time.timeSinceLevelLoad + _wallJumpDuration;
                     Face(!_facingRight);
-                    Debug.Log($"facingRight: {_facingRight}");
                 }
                 else
                 {
