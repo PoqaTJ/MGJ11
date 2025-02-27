@@ -9,7 +9,7 @@ namespace Cutscenes
 
         private Action _onArrive;
         private float _minDistance = 0.05f;
-        [SerializeField] private float _moveSpeed = 1f;
+        [SerializeField] private float _moveSpeed = 2f;
         [SerializeField] private Animator _animator;
         private static readonly int AppearTrigger = Animator.StringToHash("Appear");
         private static readonly int DisappearTrigge = Animator.StringToHash("Disappear");

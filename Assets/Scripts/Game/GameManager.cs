@@ -12,9 +12,6 @@ namespace Game
     {
         #region events
 
-        public Action OnDoublejumpUnlocked;
-        public Action OnTriplejumpUnlocked;
-        public Action OnWalljumpUnlocked;
         public Action OnPlayerDied;
         public Action OnPlayerTakeDamage;
         public Action<PlayerController> OnPlayerSpawn;
@@ -61,13 +58,18 @@ namespace Game
             _player = playerObject.GetComponent<PlayerController>();
             _player.transform.position = new Vector3(_spawner.transform.position.x, _spawner.transform.position.y,
                 _player.transform.position.z);
-            GameObject.Find("Virtual Camera").GetComponent<CinemachineVirtualCamera>().Follow = _player.transform;
+            FocusCameraOn(_player.transform);
             yield return new WaitForSeconds(0.5f);
             _player.gameObject.SetActive(true);
             _player.Reset();
             OnPlayerSpawn?.Invoke(_player);
         }
 
+        public void FocusCameraOn(Transform t)
+        {
+            GameObject.Find("Virtual Camera").GetComponent<CinemachineVirtualCamera>().Follow = t;
+        }
+        
         public void SetState(State state)
         {
             if (CurrentState == state)
@@ -109,19 +111,19 @@ namespace Game
         
         public void UnlockDoubleJump()
         {
-            OnDoublejumpUnlocked?.Invoke();
+            ServiceLocator.Instance.SaveManager.UnlockedDoubleJump = true;
         }
         
         public void UnlockTripleJump()
         {
-            OnTriplejumpUnlocked?.Invoke();
+            ServiceLocator.Instance.SaveManager.UnlockedTripleJump = true;
         }
 
         public void UnlockWallJump()
         {
-            OnWalljumpUnlocked?.Invoke();
+            ServiceLocator.Instance.SaveManager.UnlockedWallJump = true;
         }
-
+        
         public void ActivateSpawner(PlayerSpawner playerSpawner)
         {
             _spawner = playerSpawner;

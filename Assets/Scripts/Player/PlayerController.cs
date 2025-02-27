@@ -23,13 +23,13 @@ namespace Player
         private bool _facingRight = true;
         private bool _grounded;
 
-        private bool _doubleJumpUnlocked;
+        private bool _doubleJumpUnlocked => ServiceLocator.Instance.SaveManager.UnlockedDoubleJump;
         private bool _hasDoubleJumped;
 
-        private bool _tripleJumpUnlocked;
+        private bool _tripleJumpUnlocked => ServiceLocator.Instance.SaveManager.UnlockedTripleJump;
         private bool _hasTripleJumped;
 
-        private bool _wallJumpUnlocked;
+        private bool _wallJumpUnlocked => ServiceLocator.Instance.SaveManager.UnlockedWallJump;
         private bool _walled;
 
 
@@ -59,10 +59,6 @@ namespace Player
 
         private void Start()
         {
-            ServiceLocator.Instance.GameManager.OnDoublejumpUnlocked += () => _doubleJumpUnlocked = true;
-            ServiceLocator.Instance.GameManager.OnTriplejumpUnlocked += () => _tripleJumpUnlocked = true;
-
-            ServiceLocator.Instance.GameManager.OnWalljumpUnlocked += () => _wallJumpUnlocked = true;
             ServiceLocator.Instance.GameManager.RegisterPlayer(this);
             
             Reset();

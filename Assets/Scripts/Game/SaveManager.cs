@@ -1,4 +1,6 @@
 ﻿using System;
+using Services;
+using UnityEditor;
 using UnityEngine;
 
 namespace Game
@@ -6,7 +8,7 @@ namespace Game
     public class SaveManager: MonoBehaviour
     {
         private SaveGame _save;
-        private readonly string _playerPrefsKey = "save_game";
+        private static readonly string _playerPrefsKey = "save_game";
 
         private void Awake()
         {
@@ -59,6 +61,36 @@ namespace Game
             }
         }
         
+        public bool UnlockedWallJump
+        {
+            get => _save.UnlockedWallJump;
+            set
+            {
+                _save.UnlockedWallJump = value;
+                Save();
+            }
+        }
+        
+        public bool UnlockedDoubleJump
+        {
+            get => _save.UnlockedDoubleJump;
+            set
+            {
+                _save.UnlockedDoubleJump = value;
+                Save();
+            }
+        }
+        
+        public bool UnlockedTripleJump
+        {
+            get => _save.UnlockedTripleJump;
+            set
+            {
+                _save.UnlockedTripleJump = value;
+                Save();
+            }
+        }
+        
         public int Level
         {
             get => _save.Level;
@@ -79,5 +111,70 @@ namespace Game
             _save = new SaveGame();
             Save();
         }
+        
+#if UNITY_EDITOR
+        [MenuItem("Save/Delete Save (only when stopped)")]
+        private static void ClearSave()
+        {
+            PlayerPrefs.DeleteKey(_playerPrefsKey);
+        }
+
+        [MenuItem("Save/Delete Save (only when stopped)", true)]
+        private static bool ClearSaveValidate()
+        {
+            return !EditorApplication.isPlaying && PlayerPrefs.HasKey(_playerPrefsKey);
+        }
+
+        [MenuItem("Save/EnableWallJump")]
+        private static void DebugEnableWallJump()
+        {
+            ServiceLocator.Instance.SaveManager.UnlockedWallJump = !ServiceLocator.Instance.SaveManager.UnlockedWallJump;
+        }
+        
+        [MenuItem("Save/EnableWallJump", true)]
+        private static bool DebugEnableWallJumpValidate()
+        {
+            if (EditorApplication.isPlaying)
+            {
+                Menu.SetChecked("Save/EnableWallJump", ServiceLocator.Instance.SaveManager.UnlockedWallJump);
+                return true;
+            }
+            return false;
+        }
+        
+        [MenuItem("Save/EnableDoubleJump")]
+        private static void DebugEnableDoubleJump()
+        {
+            ServiceLocator.Instance.SaveManager.UnlockedDoubleJump = !ServiceLocator.Instance.SaveManager.UnlockedDoubleJump;
+        }
+        
+        [MenuItem("Save/EnableDoubleJump", true)]
+        private static bool DebugEnableDoubleJumpValidate()
+        {
+            if (EditorApplication.isPlaying)
+            {
+                Menu.SetChecked("Save/EnableDoubleJump", ServiceLocator.Instance.SaveManager.UnlockedDoubleJump);
+                return true;
+            }
+            return false;
+        }
+        
+        [MenuItem("Save/EnableTripleJump")]
+        private static void DebugEnableTripleJump()
+        {
+            ServiceLocator.Instance.SaveManager.UnlockedTripleJump = !ServiceLocator.Instance.SaveManager.UnlockedTripleJump;
+        }
+        
+        [MenuItem("Save/EnableTripleJump", true)]
+        private static bool DebugEnableTripleJumpValidate()
+        {
+            if (EditorApplication.isPlaying)
+            {
+                Menu.SetChecked("Save/EnableTripleJump", ServiceLocator.Instance.SaveManager.UnlockedTripleJump);
+                return true;
+            }
+            return false;
+        }
+#endif
     }
 }
