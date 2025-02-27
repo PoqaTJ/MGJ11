@@ -58,13 +58,18 @@ namespace Game
             _player = playerObject.GetComponent<PlayerController>();
             _player.transform.position = new Vector3(_spawner.transform.position.x, _spawner.transform.position.y,
                 _player.transform.position.z);
-            GameObject.Find("Virtual Camera").GetComponent<CinemachineVirtualCamera>().Follow = _player.transform;
+            FocusCameraOn(_player.transform);
             yield return new WaitForSeconds(0.5f);
             _player.gameObject.SetActive(true);
             _player.Reset();
             OnPlayerSpawn?.Invoke(_player);
         }
 
+        public void FocusCameraOn(Transform t)
+        {
+            GameObject.Find("Virtual Camera").GetComponent<CinemachineVirtualCamera>().Follow = t;
+        }
+        
         public void SetState(State state)
         {
             if (CurrentState == state)
@@ -118,7 +123,7 @@ namespace Game
         {
             ServiceLocator.Instance.SaveManager.UnlockedWallJump = true;
         }
-
+        
         public void ActivateSpawner(PlayerSpawner playerSpawner)
         {
             _spawner = playerSpawner;

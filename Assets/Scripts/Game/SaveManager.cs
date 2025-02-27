@@ -134,8 +134,12 @@ namespace Game
         [MenuItem("Save/EnableWallJump", true)]
         private static bool DebugEnableWallJumpValidate()
         {
-            Menu.SetChecked("Save/EnableWallJump", ServiceLocator.Instance.SaveManager.UnlockedWallJump);
-            return EditorApplication.isPlaying;
+            if (EditorApplication.isPlaying)
+            {
+                Menu.SetChecked("Save/EnableWallJump", ServiceLocator.Instance.SaveManager.UnlockedWallJump);
+                return true;
+            }
+            return false;
         }
         
         [MenuItem("Save/EnableDoubleJump")]
@@ -147,8 +151,12 @@ namespace Game
         [MenuItem("Save/EnableDoubleJump", true)]
         private static bool DebugEnableDoubleJumpValidate()
         {
-            Menu.SetChecked("Save/EnableDoubleJump", ServiceLocator.Instance.SaveManager.UnlockedDoubleJump);
-            return EditorApplication.isPlaying;
+            if (EditorApplication.isPlaying)
+            {
+                Menu.SetChecked("Save/EnableDoubleJump", ServiceLocator.Instance.SaveManager.UnlockedDoubleJump);
+                return true;
+            }
+            return false;
         }
         
         [MenuItem("Save/EnableTripleJump")]
@@ -160,8 +168,12 @@ namespace Game
         [MenuItem("Save/EnableTripleJump", true)]
         private static bool DebugEnableTripleJumpValidate()
         {
-            Menu.SetChecked("Save/EnableTripleJump", ServiceLocator.Instance.SaveManager.UnlockedTripleJump);
-            return EditorApplication.isPlaying;
+            if (EditorApplication.isPlaying)
+            {
+                Menu.SetChecked("Save/EnableTripleJump", ServiceLocator.Instance.SaveManager.UnlockedTripleJump);
+                return true;
+            }
+            return false;
         }
 #endif
     }
