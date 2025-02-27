@@ -31,6 +31,10 @@ namespace Menus.MenuTypes
         protected override void OnSetup(DialogContext context)
         {
             _context = context as ConversationMenuContext;
+            _leftImage.enabled = false;
+            _rightImage.enabled = false;
+            _leftName.enabled = false;
+            _rightName.enabled = false;
             ShowDialog();
         }
 
