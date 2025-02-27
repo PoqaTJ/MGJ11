@@ -8,7 +8,7 @@ namespace Game
     public class SaveManager: MonoBehaviour
     {
         private SaveGame _save;
-        private readonly string _playerPrefsKey = "save_game";
+        private static readonly string _playerPrefsKey = "save_game";
 
         private void Awake()
         {
@@ -116,34 +116,52 @@ namespace Game
         [MenuItem("Save/Delete Save (only when stopped)")]
         private static void ClearSave()
         {
-            ServiceLocator.Instance.SaveManager.Destroy();
+            PlayerPrefs.DeleteKey(_playerPrefsKey);
         }
 
         [MenuItem("Save/Delete Save (only when stopped)", true)]
         private static bool ClearSaveValidate()
         {
-            return EditorApplication.isPlaying;
+            return !EditorApplication.isPlaying && PlayerPrefs.HasKey(_playerPrefsKey);
         }
 
         [MenuItem("Save/EnableWallJump")]
         private static void DebugEnableWallJump()
         {
             ServiceLocator.Instance.SaveManager.UnlockedWallJump = !ServiceLocator.Instance.SaveManager.UnlockedWallJump;
-            return ServiceLocator.Instance.SaveManager.UnlockedWallJump;
+        }
+        
+        [MenuItem("Save/EnableWallJump", true)]
+        private static bool DebugEnableWallJumpValidate()
+        {
+            Menu.SetChecked("Save/EnableWallJump", ServiceLocator.Instance.SaveManager.UnlockedWallJump);
+            return EditorApplication.isPlaying;
         }
         
         [MenuItem("Save/EnableDoubleJump")]
         private static void DebugEnableDoubleJump()
         {
             ServiceLocator.Instance.SaveManager.UnlockedDoubleJump = !ServiceLocator.Instance.SaveManager.UnlockedDoubleJump;
-            return ServiceLocator.Instance.SaveManager.UnlockedDoubleJump;
+        }
+        
+        [MenuItem("Save/EnableDoubleJump", true)]
+        private static bool DebugEnableDoubleJumpValidate()
+        {
+            Menu.SetChecked("Save/EnableDoubleJump", ServiceLocator.Instance.SaveManager.UnlockedDoubleJump);
+            return EditorApplication.isPlaying;
         }
         
         [MenuItem("Save/EnableTripleJump")]
         private static void DebugEnableTripleJump()
         {
             ServiceLocator.Instance.SaveManager.UnlockedTripleJump = !ServiceLocator.Instance.SaveManager.UnlockedTripleJump;
-            return ServiceLocator.Instance.SaveManager.UnlockedTripleJump;
+        }
+        
+        [MenuItem("Save/EnableTripleJump", true)]
+        private static bool DebugEnableTripleJumpValidate()
+        {
+            Menu.SetChecked("Save/EnableTripleJump", ServiceLocator.Instance.SaveManager.UnlockedTripleJump);
+            return EditorApplication.isPlaying;
         }
 #endif
     }

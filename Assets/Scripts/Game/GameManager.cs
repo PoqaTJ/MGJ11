@@ -12,9 +12,6 @@ namespace Game
     {
         #region events
 
-        public Action OnDoublejumpUnlocked;
-        public Action OnTriplejumpUnlocked;
-        public Action OnWalljumpUnlocked;
         public Action OnPlayerDied;
         public Action OnPlayerTakeDamage;
         public Action<PlayerController> OnPlayerSpawn;
@@ -109,17 +106,17 @@ namespace Game
         
         public void UnlockDoubleJump()
         {
-            OnDoublejumpUnlocked?.Invoke();
+            ServiceLocator.Instance.SaveManager.UnlockedDoubleJump = true;
         }
         
         public void UnlockTripleJump()
         {
-            OnTriplejumpUnlocked?.Invoke();
+            ServiceLocator.Instance.SaveManager.UnlockedTripleJump = true;
         }
 
         public void UnlockWallJump()
         {
-            OnWalljumpUnlocked?.Invoke();
+            ServiceLocator.Instance.SaveManager.UnlockedWallJump = true;
         }
 
         public void ActivateSpawner(PlayerSpawner playerSpawner)
