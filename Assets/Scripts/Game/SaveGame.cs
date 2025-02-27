@@ -9,5 +9,8 @@ namespace Game
         public int Spawner;
         public int Level;
         public bool Transformed;
+        public bool UnlockedWallJump;
+        public bool UnlockedDoubleJump;
+        public bool UnlockedTripleJump;
     }
 }
