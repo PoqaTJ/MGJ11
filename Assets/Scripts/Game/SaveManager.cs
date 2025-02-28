@@ -8,7 +8,7 @@ namespace Game
     public class SaveManager: MonoBehaviour
     {
         private SaveGame _save;
-        private static readonly string _playerPrefsKey = "save_game_alpha";
+        private static readonly string _playerPrefsKey = "save_game_alpha_1";
 
         private void Awake()
         {
