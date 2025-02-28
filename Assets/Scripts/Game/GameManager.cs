@@ -52,7 +52,7 @@ namespace Game
         private IEnumerator SpawnPlayer()
         {
             Destroy(_player.gameObject);
-            GameObject prefab = ServiceLocator.Instance.SaveManager.Transformed ? _tomoyaTFPrefab : _tomoyaNormalPrefab;
+            GameObject prefab = _tomoyaTFPrefab;
             GameObject playerObject = Instantiate(prefab);
             playerObject.SetActive(false);
             _player = playerObject.GetComponent<PlayerController>();
