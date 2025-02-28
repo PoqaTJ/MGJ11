@@ -8,7 +8,7 @@ namespace Game
     public class SaveManager: MonoBehaviour
     {
         private SaveGame _save;
-        private static readonly string _playerPrefsKey = "save_game_alpha";
+        private static readonly string _playerPrefsKey = "save_game_alpha_1";
 
         private void Awake()
         {
@@ -41,7 +41,7 @@ namespace Game
             }
         }
 
-        public int SpawnerIndex
+        public string Spawner
         {
             get => _save.Spawner;
             set
@@ -50,17 +50,7 @@ namespace Game
                 Save();
             }
         }
-        
-        public bool Transformed
-        {
-            get => _save.Transformed;
-            set
-            {
-                _save.Transformed = value;
-                Save();
-            }
-        }
-        
+
         public bool UnlockedWallJump
         {
             get => _save.UnlockedWallJump;

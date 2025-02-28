@@ -2447,6 +2447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aafa2ca16afb4febaa7d30de6f4d84b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Default: 0
 --- !u!60 &143906370
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -5717,6 +5718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aafa2ca16afb4febaa7d30de6f4d84b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Default: 0
 --- !u!60 &543899645
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -8341,6 +8343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aafa2ca16afb4febaa7d30de6f4d84b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Default: 0
 --- !u!60 &799675530
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -13490,6 +13493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aafa2ca16afb4febaa7d30de6f4d84b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Default: 0
 --- !u!60 &1282700284
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -16595,67 +16599,6 @@ Transform:
   - {fileID: 547300689}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1590727316
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3122919962803180982, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122919962803180982, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122919962803180982, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122919962803180982, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122919962803180982, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122919962803180982, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122919962803180982, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122919962803180982, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122919962803180982, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122919962803180982, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5744397246651666032, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-      propertyPath: m_Name
-      value: Tomoya Normal
-      objectReference: {fileID: 0}
-    - target: {fileID: 7753432301891738235, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
 --- !u!1001 &1592207959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17024,6 +16967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aafa2ca16afb4febaa7d30de6f4d84b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Default: 0
 --- !u!60 &1609602250
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -18590,11 +18534,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1750023358 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3122919962803180982, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-  m_PrefabInstance: {fileID: 1590727316}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1751727676
 GameObject:
   m_ObjectHideFlags: 0
@@ -23343,7 +23282,7 @@ PrefabInstance:
     - target: {fileID: 6355062397067886317, guid: 53b9997575126254a9cea3ee2400c55a, type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 1750023358}
+      objectReference: {fileID: 0}
     - target: {fileID: 6355062397067886317, guid: 53b9997575126254a9cea3ee2400c55a, type: 3}
       propertyPath: m_Lens.OrthographicSize
       value: 5.2
@@ -23514,6 +23453,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7424461421399971602, guid: 34a133a168852f741b433f72140e541d, type: 3}
+      propertyPath: Default
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23547,7 +23490,6 @@ SceneRoots:
   - {fileID: 1173530300}
   - {fileID: 2016369730}
   - {fileID: 671503963}
-  - {fileID: 1590727316}
   - {fileID: 1840621198}
   - {fileID: 744412802}
   - {fileID: 327571995}

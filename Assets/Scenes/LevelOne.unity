@@ -1456,9 +1456,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba946ee4300e4159882de47ce63a708d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tomoyaNormalInput: {fileID: 1943590092}
+  _tomoyaNormalInput: {fileID: 0}
   _tomoyaMagicalInput: {fileID: 1033528593}
-  _tomoyaNormalAnimator: {fileID: 1590727317}
+  _tomoyaNormalAnimator: {fileID: 0}
   _tomoyaMagicalAnimator: {fileID: 1033528592}
   _convinceConversation1: {fileID: 11400000, guid: 604a3b52c181a6c4081de3c00abf08ef, type: 2}
   _convinceConversation2: {fileID: 11400000, guid: bc4ac9e04855cd04998daf703028ba25, type: 2}
@@ -2436,76 +2436,6 @@ Transform:
   - {fileID: 816309238}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1590727316
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3093281970764237645, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-      propertyPath: _stats
-      value: 
-      objectReference: {fileID: 11400000, guid: 5efe6dbe2f86b434b802be97584217b6, type: 2}
-    - target: {fileID: 3122919962803180982, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -9.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122919962803180982, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122919962803180982, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122919962803180982, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122919962803180982, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122919962803180982, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122919962803180982, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122919962803180982, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122919962803180982, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3122919962803180982, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5744397246651666032, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-      propertyPath: m_Name
-      value: Tomoya Normal
-      objectReference: {fileID: 0}
-    - target: {fileID: 7753432301891738235, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
---- !u!95 &1590727317 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 4634507742166601019, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-  m_PrefabInstance: {fileID: 1590727316}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1614055887
 GameObject:
   m_ObjectHideFlags: 0
@@ -2994,11 +2924,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1750023358 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3122919962803180982, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-  m_PrefabInstance: {fileID: 1590727316}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1757020069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3517,17 +3442,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8922412342071679295, guid: 1a7cc59cd3933144c8837ba471ee66cc, type: 3}
   m_PrefabInstance: {fileID: 163614212567034654}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1943590092 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7753432301891738235, guid: 734ce81c4363056469a6e9956a2d4b88, type: 3}
-  m_PrefabInstance: {fileID: 1590727316}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc1b0cfd9caa400c81277335dbe4ba37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1955523876
 GameObject:
   m_ObjectHideFlags: 0
@@ -4303,7 +4217,7 @@ PrefabInstance:
     - target: {fileID: 6355062397067886317, guid: 53b9997575126254a9cea3ee2400c55a, type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 1750023358}
+      objectReference: {fileID: 0}
     - target: {fileID: 6355062397067886317, guid: 53b9997575126254a9cea3ee2400c55a, type: 3}
       propertyPath: m_Lens.OrthographicSize
       value: 5.2
@@ -4409,6 +4323,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7424461421399971602, guid: 34a133a168852f741b433f72140e541d, type: 3}
+      propertyPath: Default
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4423,7 +4341,6 @@ SceneRoots:
   - {fileID: 4698314395063383649}
   - {fileID: 1634307075}
   - {fileID: 671503963}
-  - {fileID: 1590727316}
   - {fileID: 1840621198}
   - {fileID: 1528891673}
   - {fileID: 239507413}

@@ -12,9 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Gameplay.unity
     guid: 90b68394f6b51c34bb27fe97245a0a43
   - enabled: 1
-    path: Assets/Scenes/Debug.unity
-    guid: 9e2207f276714e54487669d038c1fd1c
-  - enabled: 1
     path: Assets/Scenes/Intro.unity
     guid: 39715648da2e8eb458ebfba35c498ce0
   - enabled: 1

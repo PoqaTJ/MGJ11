@@ -6,7 +6,7 @@ namespace Game
     public class SaveGame
     {
         public bool SeenIntro;
-        public int Spawner;
+        public string Spawner;
         public int Level;
         public bool Transformed;
         public bool UnlockedWallJump;

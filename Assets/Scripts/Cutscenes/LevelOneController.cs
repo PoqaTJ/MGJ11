@@ -33,18 +33,9 @@ namespace Cutscenes
         {
             ServiceLocator.Instance.GameManager.OnPlayerSpawn += (controller) =>
             {
-                if (ServiceLocator.Instance.SaveManager.Transformed)
-                {
-                    _tomoyaMagicalAnimator = controller.GetComponent<Animator>();
-                    _tomoyaMagicalInput = controller.GetComponent<PlayerInputController>();
-                    ServiceLocator.Instance.GameManager.FocusCameraOn(_tomoyaMagicalAnimator.gameObject.transform);
-                }
-                else
-                {
-                    _tomoyaNormalAnimator = controller.GetComponent<Animator>();
-                    _tomoyaNormalInput = controller.GetComponent<PlayerInputController>();
-                    ServiceLocator.Instance.GameManager.FocusCameraOn(_tomoyaNormalAnimator.gameObject.transform);
-                }
+                _tomoyaNormalAnimator = controller.GetComponent<Animator>();
+                _tomoyaNormalInput = controller.GetComponent<PlayerInputController>();
+                ServiceLocator.Instance.GameManager.FocusCameraOn(_tomoyaNormalAnimator.gameObject.transform);
             };
         }
 
@@ -108,7 +99,6 @@ namespace Cutscenes
             
             _tomoyaMagicalAnimator.SetTrigger(StopTransform);
 
-            ServiceLocator.Instance.SaveManager.Transformed = true;
             ServiceLocator.Instance.GameManager.FocusCameraOn(_tomoyaMagicalAnimator.gameObject.transform);
             yield return new WaitForSeconds(1f);
             
