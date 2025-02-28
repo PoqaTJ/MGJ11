@@ -6,6 +6,14 @@ namespace Game
 {
     public class PowerupWallJump: Collectable
     {
+        void Start()
+        {
+            if (ServiceLocator.Instance.SaveManager.UnlockedWallJump)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+        
         protected override void OnContact()
         {
             var context = new PopupMenuOneButton.PopupMenuOneButtonContext();
