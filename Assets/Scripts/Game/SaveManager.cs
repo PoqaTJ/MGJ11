@@ -41,7 +41,7 @@ namespace Game
             }
         }
 
-        public int SpawnerIndex
+        public string Spawner
         {
             get => _save.Spawner;
             set
@@ -50,17 +50,7 @@ namespace Game
                 Save();
             }
         }
-        
-        public bool Transformed
-        {
-            get => _save.Transformed;
-            set
-            {
-                _save.Transformed = value;
-                Save();
-            }
-        }
-        
+
         public bool UnlockedWallJump
         {
             get => _save.UnlockedWallJump;

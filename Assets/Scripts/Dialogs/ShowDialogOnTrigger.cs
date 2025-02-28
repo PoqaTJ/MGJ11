@@ -9,6 +9,15 @@ namespace Dialogs
     {
         [SerializeField] private ConversationDefinition _conversation;
         [SerializeField] private UnityEvent _onDoneEvent;
+
+        void Start()
+        {
+            if (ServiceLocator.Instance.SaveManager.WatchedIntro)
+            {
+                Debug.Log("Temp way to spawn");
+            }
+        }
+        
         private void OnTriggerEnter2D(Collider2D col)
         {
             if (col.CompareTag("Player"))

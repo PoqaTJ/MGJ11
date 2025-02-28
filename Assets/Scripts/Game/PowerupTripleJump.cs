@@ -6,6 +6,14 @@ namespace Game
 {
     public class PowerupTripleJump: Collectable
     {
+        void Start()
+        {
+            if (ServiceLocator.Instance.SaveManager.UnlockedTripleJump)
+            {
+                Destroy(this.gameObject);
+            }
+        }
+        
         protected override void OnContact()
         {
             var context = new PopupMenuOneButton.PopupMenuOneButtonContext();

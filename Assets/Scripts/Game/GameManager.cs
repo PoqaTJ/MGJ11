@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using Cinemachine;
 using Player;
 using Services;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 namespace Game
@@ -21,16 +24,19 @@ namespace Game
         public State CurrentState { get; private set; }
 
         private PlayerController _player;
-        private PlayerSpawner _spawner;
 
         [SerializeField] GameObject _akariNormalPrefab;
         [SerializeField] GameObject _akariTFPrefab;
         [SerializeField] GameObject _tomoyaNormalPrefab;
         [SerializeField] GameObject _tomoyaTFPrefab;
-
+        [SerializeField] PlayerSpawner _defaultSpawner = null;
+        private Dictionary<string, PlayerSpawner> _spawners = new();
+        
         private void Start()
         {
             OnPlayerDied += OnPlayerDeath;
+
+            StartCoroutine(LoadGameplay(SceneManager.GetActiveScene().name != "LevelOne"));
         }
 
         private void PlayerSpawned(PlayerController playerController)
@@ -40,29 +46,40 @@ namespace Game
 
         private void OnPlayerDeath()
         {
-            if (_spawner == null)
-            {
-                Debug.LogError("Player died but there is no active spawner so they will not respawn.");
-                return;
-            }
-
-            StartCoroutine(SpawnPlayer());
+            StartCoroutine(SpawnPlayer(true));
         }
 
-        private IEnumerator SpawnPlayer()
+        private IEnumerator SpawnPlayer(bool transformed)
         {
-            Destroy(_player.gameObject);
-            GameObject prefab = _tomoyaTFPrefab;
+            PlayerSpawner spawner = ChooseSpawner();
+            if (_player != null)
+            {
+                Destroy(_player.gameObject);                
+            }
+
+            GameObject prefab = transformed ? _tomoyaTFPrefab : _tomoyaNormalPrefab;
             GameObject playerObject = Instantiate(prefab);
-            playerObject.SetActive(false);
             _player = playerObject.GetComponent<PlayerController>();
-            _player.transform.position = new Vector3(_spawner.transform.position.x, _spawner.transform.position.y,
+            var input = playerObject.GetComponent<PlayerInputController>();
+            input.enabled = false;
+            _player.transform.position = new Vector3(spawner.transform.position.x, spawner.transform.position.y + 1,
                 _player.transform.position.z);
             FocusCameraOn(_player.transform);
-            yield return new WaitForSeconds(0.5f);
-            _player.gameObject.SetActive(true);
+            yield return new WaitForSeconds(1f);
             _player.Reset();
+            input.enabled = true;
             OnPlayerSpawn?.Invoke(_player);
+        }
+
+        private PlayerSpawner ChooseSpawner()
+        {
+            string spawnerID = ServiceLocator.Instance.SaveManager.Spawner;
+            if (spawnerID != null && _spawners.ContainsKey(spawnerID))
+            {
+                return _spawners[spawnerID];
+            }
+
+            return _defaultSpawner;
         }
 
         public void FocusCameraOn(Transform t)
@@ -78,34 +95,46 @@ namespace Game
                 return;
             }
 
+            StartCoroutine(SetStateRoutine(state));
+        }
+
+        private IEnumerator SetStateRoutine(State state)
+        {
             Debug.Log($"Setting state to {state}.");
+            
+            _spawners.Clear();
             switch (state)
             {
                 case State.MainMenu:
-                    SceneManager.LoadSceneAsync("Main");
+                    yield return SceneManager.LoadSceneAsync("Main");
                     break;
                 case State.Intro:
-                    SceneManager.LoadSceneAsync("Intro");
+                    yield return SceneManager.LoadSceneAsync("Intro");
                     break;
                 case State.Gameplay:
-                    LoadGameplay();
-                    break;
-                case State.Debug:
-                    SceneManager.LoadSceneAsync("Debug");
+                    int level = ServiceLocator.Instance.SaveManager.Level;
+                    if (level == 0)
+                    {
+                        yield return SceneManager.LoadSceneAsync("LevelOne");
+                        yield return LoadGameplay(false);
+                    }
+                    else
+                    {
+                        yield return SceneManager.LoadSceneAsync("Gameplay");
+                        yield return LoadGameplay(true);
+                    }
                     break;
             }
         }
+        
 
-        private void LoadGameplay()
+        private IEnumerator LoadGameplay(bool transformed)
         {
-            int level = ServiceLocator.Instance.SaveManager.Level;
-            if (level == 0)
+            _player = null;
+            GatherSpawners();
+            if (_defaultSpawner != null)
             {
-                SceneManager.LoadSceneAsync("LevelOne");
-            }
-            else
-            {
-                SceneManager.LoadSceneAsync("Gameplay");
+                yield return SpawnPlayer(transformed);
             }
         }
         
@@ -126,7 +155,7 @@ namespace Game
         
         public void ActivateSpawner(PlayerSpawner playerSpawner)
         {
-            _spawner = playerSpawner;
+            ServiceLocator.Instance.SaveManager.Spawner = playerSpawner.ID;
         }
 
         public void RegisterPlayer(PlayerController playerController)
@@ -137,6 +166,33 @@ namespace Game
         private IEnumerator PlayerDiesRoutine()
         {
             yield return null;
+        }
+
+        public void GatherSpawners()
+        {
+            PlayerSpawner[] spawners = GameObject.FindObjectsOfType<PlayerSpawner>();
+            _defaultSpawner = null;
+            foreach (var s in spawners)
+            {
+                _spawners[s.ID] = s;
+                if (s.Default)
+                {
+                    if (_defaultSpawner)
+                    {
+                        Debug.LogError("Multiple default spawners. Using the first.");
+                    }
+                    else
+                    {
+                        _defaultSpawner = s;
+                    }
+                }
+            }
+
+            if (_defaultSpawner == null && _spawners.Count > 0)
+            {
+                Debug.LogError("No default spawners found. Using the first one.");
+                _defaultSpawner = _spawners.ToArray()[0].Value;
+            }
         }
     }
 
