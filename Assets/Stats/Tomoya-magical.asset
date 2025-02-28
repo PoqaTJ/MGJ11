@@ -20,5 +20,5 @@ MonoBehaviour:
   JumpVelocity: 10
   JumpShort: 5
   CoyoteDuration: 0.1
-  WallJumpVelocityX: 5
+  WallJumpVelocityX: 6
   WallJumpVelocityY: 10
