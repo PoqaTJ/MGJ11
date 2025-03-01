@@ -126,6 +126,10 @@ MonoBehaviour:
     m_Localized: You can now jump again in mid-air, again!
     m_Metadata:
       m_Items: []
+  - m_Id: 7005196497674240
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

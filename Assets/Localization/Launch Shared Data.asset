@@ -123,6 +123,10 @@ MonoBehaviour:
     m_Key: dialog-powerup-triple-jump-body
     m_Metadata:
       m_Items: []
+  - m_Id: 7005196497674240
+    m_Key: launch-mm-button-credits
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
