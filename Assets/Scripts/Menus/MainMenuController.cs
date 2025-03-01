@@ -43,9 +43,9 @@ namespace Menus
             ServiceLocator.Instance.GameManager.SetState(state);
         }
 
-        public void DebugPressed()
+        public void CreditsPressed()
         {
-            ServiceLocator.Instance.GameManager.SetState(State.Debug);
+            ServiceLocator.Instance.GameManager.SetState(State.Credits);
         }
 
         public void ResetGameStatePressed()
