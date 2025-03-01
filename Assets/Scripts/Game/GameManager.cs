@@ -108,9 +108,6 @@ namespace Game
                 case State.MainMenu:
                     yield return SceneManager.LoadSceneAsync("Main");
                     break;
-                case State.Credits:
-                    yield return SceneManager.LoadSceneAsync("Credits");
-                    break;
                 case State.Intro:
                     yield return SceneManager.LoadSceneAsync("Intro");
                     break;
@@ -203,7 +200,6 @@ namespace Game
     {
         MainMenu,
         Gameplay,
-        Intro,
-        Credits
+        Intro
     }
 }

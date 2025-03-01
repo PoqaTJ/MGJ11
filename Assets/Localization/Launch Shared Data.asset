@@ -127,6 +127,10 @@ MonoBehaviour:
     m_Key: launch-mm-button-credits
     m_Metadata:
       m_Items: []
+  - m_Id: 7240334733172736
+    m_Key: credits-button-back
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

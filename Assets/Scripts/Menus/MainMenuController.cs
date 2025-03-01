@@ -45,7 +45,7 @@ namespace Menus
 
         public void CreditsPressed()
         {
-            ServiceLocator.Instance.GameManager.SetState(State.Credits);
+            ServiceLocator.Instance.MenuManager.Show(MenuType.CreditsMenu, null);
         }
 
         public void ResetGameStatePressed()
