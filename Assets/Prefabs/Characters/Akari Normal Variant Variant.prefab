@@ -56,13 +56,29 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4213406754117990127, guid: 82bc8381d39c49c498fac9c8be9c0bb2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 6555795739228057644, guid: 82bc8381d39c49c498fac9c8be9c0bb2, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7227299552286797303, guid: 82bc8381d39c49c498fac9c8be9c0bb2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7680674033686652527, guid: 82bc8381d39c49c498fac9c8be9c0bb2, type: 3}
       propertyPath: m_Name
       value: Akari Normal Variant Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851074849277626887, guid: 82bc8381d39c49c498fac9c8be9c0bb2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970598778787906258, guid: 82bc8381d39c49c498fac9c8be9c0bb2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3971601517163389985, guid: 82bc8381d39c49c498fac9c8be9c0bb2, type: 3}
