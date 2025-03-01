@@ -8,8 +8,11 @@ namespace Game
     {
         private void OnTriggerEnter2D(Collider2D col)
         {
-            OnContact();
-            Destroy(gameObject);
+            if (col.tag == "Player")
+            {
+                OnContact();
+                Destroy(gameObject);                
+            }
         }
 
         protected virtual void OnContact()
