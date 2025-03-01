@@ -4,6 +4,7 @@
     {
         PopupOneButton,
         PopupTwoButtons,
-        ConversationMenu
+        ConversationMenu,
+        CreditsMenu
     }
 }

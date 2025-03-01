@@ -572,10 +572,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tomoya-magical_22
+      name: tomoya-magical_wing_right
       rect:
         serializedVersion: 2
-        x: 766
+        x: 765
         y: 40
         width: 255
         height: 267
@@ -593,7 +593,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tomoya-magical_23
+      name: tomoya-magical_wing_left
       rect:
         serializedVersion: 2
         x: 1121
@@ -645,9 +645,9 @@ TextureImporter:
       tomoya-magical_15: 1117931493
       tomoya-magical_16: -1113517102
       tomoya-magical_17: -542152657
-      tomoya-magical_22: 2030049888
-      tomoya-magical_23: -981780331
       tomoya-magical_9: 1714303785
+      tomoya-magical_wing_left: -981780331
+      tomoya-magical_wing_right: 2030049888
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

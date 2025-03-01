@@ -200,7 +200,6 @@ namespace Game
     {
         MainMenu,
         Gameplay,
-        Debug,
         Intro
     }
 }
